@@ -16,9 +16,10 @@
 
   <title>Contact | Global Concepts Media</title>
 
-  <link rel="icon" href="/images/logo.jpg" />
-  <link rel="stylesheet" href="/styles.css?v=20260212" />
-  <script defer src="/shared.js?v=20260212"></script>
+  <!-- FIXED PATHS -->
+  <link rel="icon" href="./images/logo.jpg" />
+  <link rel="stylesheet" href="./styles.css?v=20260212" />
+  <script defer src="./shared.js?v=20260212"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -50,25 +51,20 @@
               method="POST"
               novalidate
             >
-              <!-- Formspree helpers -->
               <input type="hidden" name="_subject" value="New lead — GlobalConceptsMedia.com" />
 
-              <!-- Honeypot (bots fill this; humans won't see it) -->
-              <div style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;" aria-hidden="true">
-                <label>
-                  Company
-                  <input type="text" name="company" tabindex="-1" autocomplete="off" />
-                </label>
+              <div style="position:absolute; left:-9999px;" aria-hidden="true">
+                <input type="text" name="company" tabindex="-1" autocomplete="off" />
               </div>
 
               <label>
                 <span>Name</span>
-                <input name="name" type="text" autocomplete="name" required />
+                <input name="name" type="text" required />
               </label>
 
               <label>
                 <span>Email</span>
-                <input name="email" type="email" autocomplete="email" required />
+                <input name="email" type="email" required />
               </label>
 
               <label>
@@ -82,7 +78,7 @@
               </label>
 
               <button class="btn btn-primary" id="submitBtn" type="submit">Send message</button>
-              <p class="muted tiny" id="formNote" role="status" aria-live="polite"></p>
+              <p class="muted tiny" id="formNote"></p>
             </form>
           </div>
 
@@ -112,79 +108,9 @@
 
   <div id="site-footer"></div>
 
-  <script>
-    (function () {
-      const form = document.getElementById("contactForm");
-      const note = document.getElementById("formNote");
-      const btn = document.getElementById("submitBtn");
-
-      function setNote(msg, type) {
-        note.textContent = msg || "";
-        note.style.color =
-          type === "success" ? "var(--success, #0a7a3d)" :
-          type === "error" ? "var(--danger, #b00020)" :
-          "";
-      }
-
-      function setLoading(isLoading) {
-        btn.disabled = isLoading;
-        btn.textContent = isLoading ? "Sending…" : "Send message";
-      }
-
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        setNote("", "");
-
-        // Required fields
-        const name = form.querySelector('input[name="name"]');
-        const email = form.querySelector('input[name="email"]');
-        const message = form.querySelector('textarea[name="message"]');
-
-        if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
-          setNote("Please complete name, email, and message.", "error");
-          return;
-        }
-
-        // Honeypot: if filled, silently succeed
-        const hp = form.querySelector('input[name="company"]');
-        if (hp && hp.value.trim()) {
-          form.reset();
-          setNote("Thanks! Your message has been sent.", "success");
-          return;
-        }
-
-        setLoading(true);
-
-        try {
-          const data = new FormData(form);
-          const res = await fetch(form.action, {
-            method: "POST",
-            body: data,
-            headers: { "Accept": "application/json" }
-          });
-
-          if (res.ok) {
-            form.reset();
-            setNote("Thanks! Your message has been sent. We’ll reply soon.", "success");
-
-            // GA4 event (optional)
-            if (typeof gtag === "function") {
-              gtag("event", "form_submit", {
-                form_name: "Global Concepts Media Contact",
-                page_path: "/contact.html"
-              });
-            }
-          } else {
-            setNote("Something went wrong. Please try again or email us directly.", "error");
-          }
-        } catch (err) {
-          setNote("Network error. Please try again or email us directly.", "error");
-        } finally {
-          setLoading(false);
-        }
-      });
-    })();
+  <!-- Cloudflare Insights -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token":"759fd166dbe248f79e559da39742e8ea"}'>
   </script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"759fd166dbe248f79e559da39742e8ea","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
