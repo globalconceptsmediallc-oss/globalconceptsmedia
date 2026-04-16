@@ -66,7 +66,7 @@
         <div class="container footer-grid">
           <div>
             <div class="brand" style="min-width:unset;">
-              <img src="${withV("/images/logo.jpg")}" alt="Global Concepts Media logo" width="40" height="40" />
+              <img src="${withV("./images/logo.jpg")}" alt="Global Concepts Media logo" width="40" height="40" />
               <div class="brand-text">
                 <div class="brand-name">Global Concepts Media</div>
                 <div class="brand-tag">Performance marketing with standards</div>
@@ -78,7 +78,7 @@
             <a href="/google-ads.html">Google Ads</a>
             <a href="/seo.html">SEO</a>
             <a href="/case-studies.html">Case Studies</a>
-            <a href="/contact.html">Contact</a>
+            <a href="./contact.html">Contact</a>
           </div>
         </div>
       </footer>
