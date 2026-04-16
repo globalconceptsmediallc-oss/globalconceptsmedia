@@ -3,10 +3,10 @@
   const VERSION = "20260212"; // cache-busting version
 
   const navItems = [
-    { href: "/google-ads.html", label: "Google Ads" },
-    { href: "/seo.html", label: "SEO" },
-    { href: "/case-studies.html", label: "Case Studies" },
-    { href: "/contact.html", label: "Contact" }
+    { href: "./google-ads.html", label: "Google Ads" },
+    { href: "./seo.html", label: "SEO" },
+    { href: "./case-studies.html", label: "Case Studies" },
+    { href: "./contact.html", label: "Contact" }
   ];
 
   function withV(url) {
@@ -15,9 +15,16 @@
     return `${url}${joiner}v=${encodeURIComponent(VERSION)}`;
   }
 
+  function normalizePath(path) {
+    if (!path) return "";
+    return path
+      .split("?")[0]
+      .replace(/\/index\.html$/, "/")
+      .replace(/\/+$/, "") || "/";
+  }
+
   function samePath(a, b) {
-    const strip = (p) => (p || "").split("?")[0].replace(/\/+$/, "");
-    return strip(a) === strip(b);
+    return normalizePath(a) === normalizePath(b);
   }
 
   function renderHeader() {
@@ -26,16 +33,22 @@
 
     const current = window.location.pathname || "/";
 
-    const links = navItems.map(item => {
-      const active = samePath(current, item.href) ? "active" : "";
+    const links = navItems.map((item) => {
+      const active = samePath(current, item.href.replace("./", "/globalconceptsmedia/")) ? "active" : "";
       return `<a class="${active}" href="${item.href}">${item.label}</a>`;
     }).join("");
+
+    const homeActive =
+      samePath(current, "/") ||
+      samePath(current, "/index.html") ||
+      current.endsWith("/globalconceptsmedia/") ||
+      current.endsWith("/globalconceptsmedia/index.html");
 
     header.innerHTML = `
       <header class="site-header">
         <div class="container navbar">
-          <a class="brand" href="/index.html" aria-label="Global Concepts Media Home">
-            <img src="${withV("/images/logo.jpg")}" alt="Global Concepts Media logo" width="40" height="40" />
+          <a class="brand" href="./index.html" aria-label="Global Concepts Media Home">
+            <img src="${withV("./images/logo.jpg")}" alt="Global Concepts Media logo" width="40" height="40" />
             <span class="brand-text">
               <span class="brand-name">Global Concepts Media</span>
               <span class="brand-tag">Google Ads + SEO</span>
@@ -43,12 +56,12 @@
           </a>
 
           <nav class="navlinks" aria-label="Primary navigation">
-            <a class="${samePath(current, "/index.html") || samePath(current, "/") ? "active" : ""}" href="/index.html">Home</a>
+            <a class="${homeActive ? "active" : ""}" href="./index.html">Home</a>
             ${links}
           </nav>
 
           <div class="nav-cta">
-            <a class="btn btn-primary" href="/contact.html">Book a consult</a>
+            <a class="btn btn-primary" href="./contact.html">Book a consult</a>
           </div>
         </div>
       </header>
@@ -75,9 +88,9 @@
             <div class="copy">© ${year} Global Concepts Media. All rights reserved.</div>
           </div>
           <div class="footer-links" aria-label="Footer links">
-            <a href="/google-ads.html">Google Ads</a>
-            <a href="/seo.html">SEO</a>
-            <a href="/case-studies.html">Case Studies</a>
+            <a href="./google-ads.html">Google Ads</a>
+            <a href="./seo.html">SEO</a>
+            <a href="./case-studies.html">Case Studies</a>
             <a href="./contact.html">Contact</a>
           </div>
         </div>
@@ -116,9 +129,8 @@
       ];
       const body = encodeURIComponent(bodyLines.join("\n"));
 
-      // Replace if you want a different inbox.
       const to = "andy@globalconceptsmedia.com";
-      const mailto = `mailto:${encodeURIComponent(to)}?subject=${subject}&body=${body}`;
+      const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
 
       if (note) note.textContent = "Opening your email client…";
       window.location.href = mailto;
