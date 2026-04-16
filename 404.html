@@ -5,68 +5,65 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Page Not Found | Global Concepts Media</title>
   <meta name="description" content="The page you’re looking for doesn’t exist. Return home or request a growth audit." />
-  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Styles + Shared UI -->
+  <link rel="icon" href="./images/logo.jpg" />
+  <link rel="stylesheet" href="./styles.css?v=20260212" />
+  <script defer src="./shared.js?v=20260212"></script>
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <a class="brand" href="./index.html"><span class="logo" aria-hidden="true"></span> Global Concepts Media</a>
-    <nav>
-      <ul>
-        <li><a data-nav href="./index.html">Home</a></li>
-        <li><a data-nav href="./google-ads.html">Google Ads</a></li>
-        <li><a data-nav href="./seo.html">SEO</a></li>
-        <li><a data-nav href="./case-studies.html">Case Studies</a></li>
-        <li><a data-nav href="./contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="nav-cta">
-      <a class="btn" href="./contact.html">Free Growth Audit</a>
-      <a class="btn primary" href="./contact.html">Book a Call</a>
-    </div>
-  </div>
-</header>
 
-<main>
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="kicker">404 • Not Found</div>
-        <h1>This page doesn’t exist.</h1>
-        <p class="lede">If you typed the link manually, double-check it. Otherwise, use the links below to get back on track.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="./index.html">Go Home</a>
-          <a class="btn" href="./contact.html">Request a Free Audit</a>
-          <a class="btn ghost" href="./case-studies.html">View Case Studies</a>
+  <!-- Shared Header -->
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        
+        <div>
+          <p class="eyebrow">404 • Not Found</p>
+          <h1>This page doesn’t exist.</h1>
+          <p class="subhead">
+            The page you’re looking for may have moved, been deleted, or never existed.
+            Use the options below to get back on track.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="./index.html">Go Home</a>
+            <a class="btn btn-ghost" href="./contact.html">Request a Free Audit</a>
+            <a class="btn btn-ghost" href="./case-studies.html">View Case Studies</a>
+          </div>
         </div>
+
+        <div class="hero-card">
+          <div class="card glass">
+            <div class="card-top">
+              <h3>Popular pages</h3>
+              <p class="muted">Start here instead.</p>
+            </div>
+
+            <ul class="checklist">
+              <li><a href="./google-ads.html">Google Ads Management</a></li>
+              <li><a href="./seo.html">SEO Services</a></li>
+              <li><a href="./case-studies.html">Case Studies</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <div class="card-cta">
+              <a class="btn btn-primary btn-block" href="./contact.html">Book a consult</a>
+              <a class="btn btn-ghost btn-block" href="./index.html">Back to Home</a>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <aside class="card pad">
-        <h3 style="margin:0 0 6px">Popular pages</h3>
-        <ul class="list">
-          <li><a href="./google-ads.html">Google Ads Management</a></li>
-          <li><a href="./seo.html">SEO Services</a></li>
-          <li><a href="./case-studies.html">Case Studies</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-        </ul>
-      </aside>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
 
-<footer>
-  <div class="container footer-grid">
-    <div>
-      <div class="brand"><span class="logo" aria-hidden="true"></span> Global Concepts Media</div>
-      <div class="small">Performance marketing systems for measurable growth.</div>
-    </div>
-    <div class="footer-links">
-      <a href="./index.html">Home</a>
-      <a href="./sitemap.xml">Sitemap</a>
-      <a href="./privacy.html">Privacy</a>
-    </div>
-  </div>
-</footer>
+  <!-- Shared Footer -->
+  <div id="site-footer"></div>
 
-<script src="./shared.js"></script>
 </body>
 </html>
