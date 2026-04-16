@@ -5,68 +5,57 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Privacy Policy | Global Concepts Media</title>
   <meta name="description" content="Privacy policy for Global Concepts Media." />
+
+  <!-- Canonical -->
   <link rel="canonical" href="./privacy.html" />
-  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Styles + Shared UI -->
+  <link rel="icon" href="./images/logo.jpg" />
+  <link rel="stylesheet" href="./styles.css?v=20260212" />
+  <script defer src="./shared.js?v=20260212"></script>
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <a class="brand" href="./index.html"><span class="logo" aria-hidden="true"></span> Global Concepts Media</a>
-    <nav>
-      <ul>
-        <li><a data-nav href="./index.html">Home</a></li>
-        <li><a data-nav href="./contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="nav-cta">
-      <a class="btn primary" href="./contact.html">Book a Call</a>
-    </div>
-  </div>
-</header>
 
-<main>
-  <section class="section">
-    <div class="container">
-      <h1 style="font-size:40px;margin:20px 0 10px">Privacy Policy</h1>
-      <p class="small">Last updated: (add date)</p>
+  <!-- Shared Header -->
+  <div id="site-header"></div>
 
-      <div class="card pad">
-        <p><strong>Summary:</strong> We only collect information you submit through forms or communications. We do not sell your data.</p>
-        <hr class="sep" />
-        <h2 style="margin:0 0 8px">Information we collect</h2>
-        <ul class="list">
-          <li>Contact details you submit (name, email, website)</li>
-          <li>Message content you provide</li>
-          <li>Basic analytics data (if enabled)</li>
-        </ul>
-        <hr class="sep" />
-        <h2 style="margin:0 0 8px">How we use it</h2>
-        <ul class="list">
-          <li>To respond to requests and provide services</li>
-          <li>To improve site performance and content</li>
-        </ul>
-        <hr class="sep" />
-        <h2 style="margin:0 0 8px">Contact</h2>
-        <p class="small" style="margin:0">Questions? Use the contact page.</p>
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <h1 style="font-size:40px;margin:20px 0 10px">Privacy Policy</h1>
+        <p class="small">Last updated: (add date)</p>
+
+        <div class="card pad">
+          <p><strong>Summary:</strong> We only collect information you submit through forms or communications. We do not sell your data.</p>
+
+          <div class="divider"></div>
+
+          <h2>Information we collect</h2>
+          <ul class="bullets">
+            <li>Contact details you submit (name, email, website)</li>
+            <li>Message content you provide</li>
+            <li>Basic analytics data (if enabled)</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <h2>How we use it</h2>
+          <ul class="bullets">
+            <li>To respond to requests and provide services</li>
+            <li>To improve site performance and content</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <h2>Contact</h2>
+          <p class="muted">Questions? Use the contact page.</p>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
 
-<footer>
-  <div class="container footer-grid">
-    <div>
-      <div class="brand"><span class="logo" aria-hidden="true"></span> Global Concepts Media</div>
-      <div class="small">Privacy-first by default.</div>
-    </div>
-    <div class="footer-links">
-      <a href="./index.html">Home</a>
-      <a href="./contact.html">Contact</a>
-      <a href="./sitemap.xml">Sitemap</a>
-    </div>
-  </div>
-</footer>
+  <!-- Shared Footer -->
+  <div id="site-footer"></div>
 
-<script src="./shared.js"></script>
 </body>
 </html>
