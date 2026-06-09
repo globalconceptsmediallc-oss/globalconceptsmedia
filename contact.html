@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Contact Global Concepts Media—say hello, request an audit, or book a consult." />
+  <meta name="description" content="Book a Growth Review with Global Concepts Media and get a clear plan for improving your website, SEO, ads, tracking, and lead flow." />
 
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0SN72D1GNG"></script>
@@ -14,96 +14,273 @@
     gtag('config', 'G-0SN72D1GNG', { anonymize_ip: true });
   </script>
 
-  <title>Contact | Global Concepts Media</title>
+  <title>Growth Review | Global Concepts Media</title>
 
-  <!-- FIXED PATHS -->
   <link rel="icon" href="./images/logo.jpg" />
   <link rel="stylesheet" href="./styles.css?v=20260212" />
   <script defer src="./shared.js?v=20260212"></script>
+
+  <style>
+    .growth-hero{
+      padding:90px 0 60px;
+      background:
+        radial-gradient(circle at top left, rgba(245,158,11,.22), transparent 34%),
+        radial-gradient(circle at top right, rgba(37,99,235,.24), transparent 38%),
+        linear-gradient(135deg,#0f172a,#111827);
+      color:#fff;
+    }
+    .growth-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:36px;
+      align-items:center;
+    }
+    .growth-hero h1{
+      font-size:clamp(2.4rem,5vw,4.8rem);
+      line-height:.95;
+      letter-spacing:-.06em;
+      margin:0 0 22px;
+    }
+    .growth-hero .subhead{
+      color:#dbeafe;
+      max-width:720px;
+      font-size:1.18rem;
+    }
+    .growth-card{
+      background:#fff;
+      color:#0f172a;
+      border-radius:28px;
+      padding:28px;
+      box-shadow:0 24px 70px rgba(0,0,0,.24);
+    }
+    .growth-card h2{margin-top:0;}
+    .mini-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin:22px 0;
+    }
+    .mini-grid div{
+      background:#f8fafc;
+      border:1px solid #e2e8f0;
+      border-radius:16px;
+      padding:14px;
+      font-weight:800;
+    }
+    .growth-section{padding:72px 0;}
+    .growth-head{
+      max-width:760px;
+      margin:0 auto 34px;
+      text-align:center;
+    }
+    .growth-head h2{
+      font-size:clamp(2rem,4vw,3.25rem);
+      line-height:1;
+      letter-spacing:-.05em;
+      margin:0 0 14px;
+    }
+    .growth-head p{color:#64748b;font-size:1.08rem;}
+    .growth-cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .growth-box{
+      background:#fff;
+      border:1px solid #e2e8f0;
+      border-radius:22px;
+      padding:24px;
+      box-shadow:0 14px 38px rgba(15,23,42,.06);
+    }
+    .growth-box h3{margin-top:0;line-height:1.15;}
+    .growth-box p{color:#64748b;margin-bottom:0;}
+    .growth-dark{
+      background:#0f172a;
+      color:#fff;
+    }
+    .growth-dark .growth-head p{color:#cbd5e1;}
+    .growth-dark .growth-box{
+      background:#111827;
+      border-color:rgba(255,255,255,.12);
+    }
+    .growth-dark .growth-box p{color:#cbd5e1;}
+    .form-wrap{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:28px;
+      align-items:start;
+    }
+    @media(max-width:900px){
+      .growth-grid,.growth-cards,.form-wrap{grid-template-columns:1fr;}
+      .mini-grid{grid-template-columns:1fr;}
+    }
+  </style>
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div id="site-header"></div>
 
   <main id="main">
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">Contact</p>
-        <h1>Let’s talk <span class="grad">growth</span>.</h1>
-        <p class="subhead">
-          Send a note with your site, goals, and what you’ve tried so far. We’ll reply with next steps.
-        </p>
+
+    <section class="growth-hero">
+      <div class="container growth-grid">
+        <div>
+          <p class="eyebrow">Growth Review</p>
+          <h1>Find the gaps costing your business leads, sales, and momentum.</h1>
+          <p class="subhead">
+            A focused review of your website, SEO, ads, tracking, and lead flow so you can see what is working, what is broken, and what needs to happen next.
+          </p>
+          <a class="btn btn-primary" href="#growth-form">Book a Growth Review</a>
+        </div>
+
+        <aside class="growth-card">
+          <h2>What we review first</h2>
+          <p class="muted">
+            Most businesses do not have one problem. They have small leaks across traffic, trust, conversion, and tracking.
+          </p>
+          <div class="mini-grid">
+            <div>Website</div>
+            <div>SEO</div>
+            <div>Google Ads</div>
+            <div>Analytics</div>
+          </div>
+          <a class="btn btn-primary" href="#growth-form">Request Review</a>
+        </aside>
       </div>
     </section>
 
-    <section class="section">
+    <section class="growth-section">
       <div class="container">
-        <div class="grid-contact">
-          <div class="card">
-            <h2>Send a message</h2>
-            <p class="muted">This form sends your message directly to our inbox.</p>
+        <div class="growth-head">
+          <h2>This is not a generic marketing call.</h2>
+          <p>
+            It is a practical review of your current growth system so you can identify the highest-impact next move.
+          </p>
+        </div>
 
-            <form
-              id="contactForm"
-              class="form"
-              action="https://formspree.io/f/xdaleell"
-              method="POST"
-              novalidate
-            >
-              <input type="hidden" name="_subject" value="New lead — GlobalConceptsMedia.com" />
+        <div class="growth-cards">
+          <article class="growth-box">
+            <h3>Your website may be getting traffic but not converting it.</h3>
+            <p>We review the message, page flow, trust proof, calls-to-action, mobile experience, and lead path.</p>
+          </article>
 
-              <div style="position:absolute; left:-9999px;" aria-hidden="true">
-                <input type="text" name="company" tabindex="-1" autocomplete="off" />
-              </div>
+          <article class="growth-box">
+            <h3>Your ads may be spending without enough clarity.</h3>
+            <p>We look at campaign structure, search intent, wasted spend, landing pages, and conversion tracking.</p>
+          </article>
 
-              <label>
-                <span>Name</span>
-                <input name="name" type="text" required />
-              </label>
-
-              <label>
-                <span>Email</span>
-                <input name="email" type="email" required />
-              </label>
-
-              <label>
-                <span>Website</span>
-                <input name="website" type="url" placeholder="https://example.com" />
-              </label>
-
-              <label>
-                <span>What are you trying to achieve?</span>
-                <textarea name="message" rows="6" required></textarea>
-              </label>
-
-              <button class="btn btn-primary" id="submitBtn" type="submit">Send message</button>
-              <p class="muted tiny" id="formNote"></p>
-            </form>
-          </div>
-
-          <aside class="card glass">
-            <h2>What to include</h2>
-            <ul class="bullets">
-              <li>Your primary offer and target customer</li>
-              <li>Current monthly ad spend (if any)</li>
-              <li>Top 1–2 competitors</li>
-              <li>What “success” looks like in 90 days</li>
-            </ul>
-
-            <div class="divider"></div>
-
-            <h3>Services</h3>
-            <ul class="bullets">
-              <li>Google Ads management</li>
-              <li>SEO strategy and execution</li>
-              <li>Tracking QA (GA4 + key events)</li>
-              <li>Landing page and funnel improvements</li>
-            </ul>
-          </aside>
+          <article class="growth-box">
+            <h3>Your data may not be telling the full story.</h3>
+            <p>We check whether GA4, forms, calls, key events, and reports are helping you make better decisions.</p>
+          </article>
         </div>
       </div>
     </section>
+
+    <section class="growth-section growth-dark">
+      <div class="container">
+        <div class="growth-head">
+          <h2>What you get from the Growth Review</h2>
+          <p>A clear view of the current system and the priority fixes that can improve results.</p>
+        </div>
+
+        <div class="growth-cards">
+          <article class="growth-box">
+            <h3>Website Conversion Review</h3>
+            <p>Homepage, service pages, CTAs, proof, offer clarity, and sales flow.</p>
+          </article>
+
+          <article class="growth-box">
+            <h3>SEO & Search Review</h3>
+            <p>Search visibility, indexing, page intent, local opportunity, and content gaps.</p>
+          </article>
+
+          <article class="growth-box">
+            <h3>Ads & Lead Review</h3>
+            <p>Google Ads structure, lead quality, landing page alignment, and wasted spend signals.</p>
+          </article>
+
+          <article class="growth-box">
+            <h3>Tracking Review</h3>
+            <p>GA4, key events, form tracking, call tracking, and reporting accuracy.</p>
+          </article>
+
+          <article class="growth-box">
+            <h3>Offer Review</h3>
+            <p>We check whether the offer is clear, specific, believable, and strong enough.</p>
+          </article>
+
+          <article class="growth-box">
+            <h3>Priority Action Plan</h3>
+            <p>You leave with a practical next-step direction, not vague marketing noise.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="growth-section" id="growth-form">
+      <div class="container form-wrap">
+        <div>
+          <p class="eyebrow">Book the review</p>
+          <h2>Ready to see what is really holding growth back?</h2>
+          <p class="muted">
+            Send your business name, website, and what you are trying to improve. We will review the details and reply with next steps.
+          </p>
+
+          <ul class="bullets">
+            <li>Your primary offer and target customer</li>
+            <li>Current monthly ad spend, if any</li>
+            <li>Top 1–2 competitors</li>
+            <li>What success looks like in 90 days</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Request a Growth Review</h2>
+          <p class="muted">This form sends your request directly to our inbox.</p>
+
+          <form
+            id="contactForm"
+            class="form"
+            action="https://formspree.io/f/xdaleell"
+            method="POST"
+            novalidate
+          >
+            <input type="hidden" name="_subject" value="Growth Review Request — GlobalConceptsMedia.com" />
+
+            <div style="position:absolute; left:-9999px;" aria-hidden="true">
+              <input type="text" name="company" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <label>
+              <span>Name</span>
+              <input name="name" type="text" required />
+            </label>
+
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" required />
+            </label>
+
+            <label>
+              <span>Website</span>
+              <input name="website" type="url" placeholder="https://example.com" />
+            </label>
+
+            <label>
+              <span>What are you trying to improve?</span>
+              <textarea name="message" rows="6" required placeholder="Tell us about your website, ads, SEO, leads, or tracking issues."></textarea>
+            </label>
+
+            <button class="btn btn-primary" id="submitBtn" type="submit">Request Growth Review</button>
+            <p class="muted tiny" id="formNote"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <div id="site-footer"></div>
