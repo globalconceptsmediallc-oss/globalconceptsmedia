@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Book a Growth Review with Global Concepts Media and get a clear plan for improving your website, SEO, ads, tracking, and lead flow." />
 
-  <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0SN72D1GNG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -22,30 +21,34 @@
 
   <style>
     .growth-hero{
-      padding:90px 0 60px;
+      padding:90px 0 70px;
       background:
         radial-gradient(circle at top left, rgba(245,158,11,.22), transparent 34%),
         radial-gradient(circle at top right, rgba(37,99,235,.24), transparent 38%),
         linear-gradient(135deg,#0f172a,#111827);
       color:#fff;
     }
+
     .growth-grid{
       display:grid;
       grid-template-columns:1.1fr .9fr;
       gap:36px;
       align-items:center;
     }
+
     .growth-hero h1{
       font-size:clamp(2.4rem,5vw,4.8rem);
       line-height:.95;
       letter-spacing:-.06em;
       margin:0 0 22px;
     }
+
     .growth-hero .subhead{
       color:#dbeafe;
       max-width:720px;
       font-size:1.18rem;
     }
+
     .growth-card{
       background:#fff;
       color:#0f172a;
@@ -53,13 +56,22 @@
       padding:28px;
       box-shadow:0 24px 70px rgba(0,0,0,.24);
     }
-    .growth-card h2{margin-top:0;}
+
+    .growth-card h2{
+      margin-top:0;
+    }
+
+    .growth-card p{
+      color:#475569;
+    }
+
     .mini-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:12px;
       margin:22px 0;
     }
+
     .mini-grid div{
       background:#f8fafc;
       border:1px solid #e2e8f0;
@@ -67,24 +79,35 @@
       padding:14px;
       font-weight:800;
     }
-    .growth-section{padding:72px 0;}
+
+    .growth-section{
+      padding:72px 0;
+    }
+
     .growth-head{
       max-width:760px;
       margin:0 auto 34px;
       text-align:center;
     }
+
     .growth-head h2{
       font-size:clamp(2rem,4vw,3.25rem);
       line-height:1;
       letter-spacing:-.05em;
       margin:0 0 14px;
     }
-    .growth-head p{color:#64748b;font-size:1.08rem;}
+
+    .growth-head p{
+      color:#64748b;
+      font-size:1.08rem;
+    }
+
     .growth-cards{
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:20px;
     }
+
     .growth-box{
       background:#fff;
       border:1px solid #e2e8f0;
@@ -92,27 +115,52 @@
       padding:24px;
       box-shadow:0 14px 38px rgba(15,23,42,.06);
     }
-    .growth-box h3{margin-top:0;line-height:1.15;}
-    .growth-box p{color:#64748b;margin-bottom:0;}
+
+    .growth-box h3{
+      margin-top:0;
+      line-height:1.15;
+    }
+
+    .growth-box p{
+      color:#64748b;
+      margin-bottom:0;
+    }
+
     .growth-dark{
       background:#0f172a;
       color:#fff;
     }
-    .growth-dark .growth-head p{color:#cbd5e1;}
+
+    .growth-dark .growth-head p{
+      color:#cbd5e1;
+    }
+
     .growth-dark .growth-box{
       background:#111827;
       border-color:rgba(255,255,255,.12);
     }
-    .growth-dark .growth-box p{color:#cbd5e1;}
+
+    .growth-dark .growth-box p{
+      color:#cbd5e1;
+    }
+
     .form-wrap{
       display:grid;
       grid-template-columns:.9fr 1.1fr;
       gap:28px;
       align-items:start;
     }
+
     @media(max-width:900px){
-      .growth-grid,.growth-cards,.form-wrap{grid-template-columns:1fr;}
-      .mini-grid{grid-template-columns:1fr;}
+      .growth-grid,
+      .growth-cards,
+      .form-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .mini-grid{
+        grid-template-columns:1fr;
+      }
     }
   </style>
 </head>
@@ -137,17 +185,45 @@
 
         <aside class="growth-card">
           <h2>What we review first</h2>
-          <p class="muted">
+          <p>
             Most businesses do not have one problem. They have small leaks across traffic, trust, conversion, and tracking.
           </p>
+
           <div class="mini-grid">
-            <div>Website</div>
-            <div>SEO</div>
-            <div>Google Ads</div>
-            <div>Analytics</div>
+            <div>Lost Lead Opportunities</div>
+            <div>Conversion Bottlenecks</div>
+            <div>Search Visibility Gaps</div>
+            <div>Tracking & Attribution Errors</div>
           </div>
-          <a class="btn btn-primary" href="#growth-form">Request Review</a>
+
+          <a class="btn btn-primary" href="#growth-form">Get My Growth Review</a>
         </aside>
+      </div>
+    </section>
+
+    <section class="growth-section">
+      <div class="container">
+        <div class="growth-head">
+          <h2>Businesses Don't Hire Marketing.</h2>
+          <p>They hire results.</p>
+        </div>
+
+        <div class="growth-cards">
+          <article class="growth-box">
+            <h3>More Qualified Leads</h3>
+            <p>Generate opportunities from people already searching for your services.</p>
+          </article>
+
+          <article class="growth-box">
+            <h3>Better Visibility</h3>
+            <p>Improve how often your business appears when customers are looking for solutions.</p>
+          </article>
+
+          <article class="growth-box">
+            <h3>Better Decision Making</h3>
+            <p>Know exactly what is working and what is wasting money.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -220,25 +296,58 @@
       </div>
     </section>
 
+    <section class="growth-section">
+      <div class="container">
+        <div class="growth-head">
+          <h2>Real Work. Real Results.</h2>
+          <p>
+            We focus on measurable improvements, clear reporting, and documented execution.
+          </p>
+        </div>
+
+        <div class="growth-cards">
+          <article class="growth-box">
+            <h3>SEO Audits</h3>
+            <p>Technical audits, search visibility reviews, content planning, and implementation guidance.</p>
+          </article>
+
+          <article class="growth-box">
+            <h3>Google Ads Optimization</h3>
+            <p>Campaign structure improvements, conversion tracking, wasted spend reduction, and lead quality analysis.</p>
+          </article>
+
+          <article class="growth-box">
+            <h3>Analytics & Reporting</h3>
+            <p>GA4 validation, event tracking, reporting clarity, and growth measurement systems.</p>
+          </article>
+        </div>
+
+        <div style="text-align:center;margin-top:40px;">
+          <a class="btn btn-primary" href="case-studies.html">View Case Studies</a>
+        </div>
+      </div>
+    </section>
+
     <section class="growth-section" id="growth-form">
       <div class="container form-wrap">
         <div>
           <p class="eyebrow">Book the review</p>
-          <h2>Ready to see what is really holding growth back?</h2>
+          <h2>Let's Find Your Biggest Growth Opportunity.</h2>
           <p class="muted">
             Send your business name, website, and what you are trying to improve. We will review the details and reply with next steps.
           </p>
 
           <ul class="bullets">
-            <li>Your primary offer and target customer</li>
-            <li>Current monthly ad spend, if any</li>
-            <li>Top 1–2 competitors</li>
-            <li>What success looks like in 90 days</li>
+            <li>Website traffic but few leads</li>
+            <li>Running ads with unclear results</li>
+            <li>Unsure if SEO is helping</li>
+            <li>No confidence in reporting</li>
+            <li>Need a second opinion before hiring an agency</li>
           </ul>
         </div>
 
         <div class="card">
-          <h2>Request a Growth Review</h2>
+          <h2>Book My Growth Review</h2>
           <p class="muted">This form sends your request directly to our inbox.</p>
 
           <form
@@ -274,7 +383,10 @@
               <textarea name="message" rows="6" required placeholder="Tell us about your website, ads, SEO, leads, or tracking issues."></textarea>
             </label>
 
-            <button class="btn btn-primary" id="submitBtn" type="submit">Request Growth Review</button>
+            <button class="btn btn-primary" id="submitBtn" type="submit">
+              Book My Growth Review
+            </button>
+
             <p class="muted tiny" id="formNote"></p>
           </form>
         </div>
@@ -285,7 +397,6 @@
 
   <div id="site-footer"></div>
 
-  <!-- Cloudflare Insights -->
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
     data-cf-beacon='{"token":"759fd166dbe248f79e559da39742e8ea"}'>
   </script>
