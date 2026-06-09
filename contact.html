@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Book a Growth Review with Global Concepts Media and get a clear plan for improving your website, SEO, ads, tracking, and lead flow." />
+  <meta name="description" content="Book a Growth Review with Global Concepts Media and get a clear plan for improving your website, SEO, ads, tracking, lead flow, and business growth system." />
 
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0SN72D1GNG"></script>
@@ -22,57 +22,82 @@
 
   <style>
     .growth-page{
-      background:#050b18;
-      color:#ffffff;
+      background:#ffffff;
+      color:#0f172a;
     }
 
     .growth-hero{
-      padding:92px 0 74px;
+      padding:92px 0 78px;
       background:
-        radial-gradient(circle at top left, rgba(245,158,11,.22), transparent 35%),
-        radial-gradient(circle at top right, rgba(37,99,235,.28), transparent 40%),
+        radial-gradient(circle at top left, rgba(245,158,11,.24), transparent 35%),
+        radial-gradient(circle at top right, rgba(37,99,235,.34), transparent 42%),
         linear-gradient(135deg,#0b1020,#10244a);
+      color:#ffffff;
+      border-bottom:1px solid rgba(255,255,255,.08);
     }
 
     .growth-grid{
       display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:44px;
+      grid-template-columns:1.08fr .92fr;
+      gap:48px;
       align-items:center;
     }
 
     .growth-hero h1{
-      font-size:clamp(2.5rem,5vw,4.9rem);
-      line-height:.95;
-      letter-spacing:-.06em;
-      margin:0 0 24px;
       color:#ffffff;
+      font-size:clamp(2.6rem,5.2vw,5rem);
+      line-height:.95;
+      letter-spacing:-.065em;
+      margin:0 0 24px;
+      max-width:760px;
     }
 
     .growth-hero .subhead{
       color:#dbeafe;
       max-width:720px;
       font-size:1.18rem;
-      margin-bottom:26px;
+      margin:0 0 28px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      align-items:center;
+    }
+
+    .hero-note{
+      margin-top:22px;
+      color:#cbd5e1;
+      font-size:.95rem;
+      font-weight:700;
+    }
+
+    .hero-note span{
+      color:#86efac;
+      font-weight:900;
     }
 
     .growth-card{
       background:#ffffff;
       color:#0f172a;
-      border-radius:28px;
-      padding:30px;
-      box-shadow:0 24px 70px rgba(0,0,0,.28);
+      border-radius:30px;
+      padding:32px;
+      box-shadow:0 26px 80px rgba(0,0,0,.30);
       border:1px solid rgba(255,255,255,.2);
     }
 
     .growth-card h2{
       color:#0f172a;
       margin:0 0 12px;
+      line-height:1.05;
+      letter-spacing:-.035em;
+      font-size:2rem;
     }
 
     .growth-card p{
       color:#475569;
-      margin-bottom:0;
+      margin:0;
     }
 
     .mini-grid{
@@ -92,8 +117,17 @@
       line-height:1.25;
     }
 
+    .mini-grid div span{
+      display:block;
+      color:#2563eb;
+      font-size:.8rem;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      margin-bottom:5px;
+    }
+
     .growth-section{
-      padding:78px 0;
+      padding:82px 0;
       background:#ffffff;
       color:#0f172a;
     }
@@ -108,17 +142,17 @@
     }
 
     .growth-head{
-      max-width:800px;
-      margin:0 auto 38px;
+      max-width:850px;
+      margin:0 auto 42px;
       text-align:center;
     }
 
     .growth-head h2{
       color:inherit;
-      font-size:clamp(2rem,4vw,3.35rem);
+      font-size:clamp(2.1rem,4vw,3.45rem);
       line-height:1;
-      letter-spacing:-.05em;
-      margin:0 0 14px;
+      letter-spacing:-.055em;
+      margin:0 0 16px;
     }
 
     .growth-head p{
@@ -135,6 +169,10 @@
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:22px;
+    }
+
+    .growth-cards.four{
+      grid-template-columns:repeat(4,1fr);
     }
 
     .growth-box{
@@ -158,22 +196,157 @@
       margin:0;
     }
 
+    .growth-box strong{
+      color:#2563eb;
+      display:block;
+      margin-bottom:8px;
+      font-size:.85rem;
+      text-transform:uppercase;
+      letter-spacing:.07em;
+    }
+
     .dark .growth-box{
       background:#ffffff;
       border-color:#dbe3ef;
     }
 
-    .dark .growth-box h3{
-      color:#0f172a !important;
+    .process{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      counter-reset:step;
     }
 
-    .dark .growth-box p{
-      color:#475569 !important;
+    .step{
+      background:#ffffff;
+      border:1px solid #dbe3ef;
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 14px 38px rgba(15,23,42,.06);
     }
 
-    .proof-cta{
-      text-align:center;
-      margin-top:42px;
+    .step:before{
+      counter-increment:step;
+      content:counter(step);
+      display:grid;
+      place-items:center;
+      width:38px;
+      height:38px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#7c3aed,#06b6d4);
+      color:#ffffff;
+      font-weight:900;
+      margin-bottom:16px;
+    }
+
+    .step h3{
+      color:#0f172a;
+      margin:0 0 10px;
+      line-height:1.15;
+    }
+
+    .step p{
+      color:#475569;
+      margin:0;
+    }
+
+    .proof-panel{
+      background:
+        radial-gradient(circle at top left, rgba(245,158,11,.20), transparent 38%),
+        linear-gradient(135deg,#111827,#020617);
+      color:#ffffff;
+      border-radius:32px;
+      padding:42px;
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:32px;
+      align-items:center;
+      box-shadow:0 24px 70px rgba(15,23,42,.20);
+    }
+
+    .proof-panel h2{
+      color:#ffffff;
+      font-size:clamp(2rem,4vw,3.2rem);
+      line-height:1;
+      letter-spacing:-.055em;
+      margin:0 0 16px;
+    }
+
+    .proof-panel p{
+      color:#dbeafe;
+      margin:0 0 22px;
+    }
+
+    .proof-list{
+      display:grid;
+      gap:14px;
+    }
+
+    .proof-item{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:18px;
+      padding:18px;
+    }
+
+    .proof-item h3{
+      color:#ffffff;
+      margin:0 0 6px;
+      line-height:1.15;
+    }
+
+    .proof-item p{
+      color:#cbd5e1;
+      margin:0;
+    }
+
+    .fit-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:32px;
+      align-items:center;
+    }
+
+    .fit-copy h2{
+      font-size:clamp(2rem,4vw,3.25rem);
+      line-height:1;
+      letter-spacing:-.055em;
+      margin:0 0 18px;
+    }
+
+    .fit-copy p{
+      color:#475569;
+      font-size:1.08rem;
+    }
+
+    .fit-list{
+      background:#ffffff;
+      border:1px solid #dbe3ef;
+      border-radius:28px;
+      padding:30px;
+      box-shadow:0 16px 44px rgba(15,23,42,.08);
+    }
+
+    .fit-list ul{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:14px;
+    }
+
+    .fit-list li{
+      color:#0f172a;
+      font-weight:800;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+
+    .fit-list li:before{
+      content:"✓";
+      color:#16a34a;
+      font-weight:900;
     }
 
     .form-wrap{
@@ -185,27 +358,30 @@
 
     .form-intro h2{
       color:#0f172a;
-      font-size:clamp(2rem,4vw,3rem);
+      font-size:clamp(2rem,4vw,3.25rem);
       line-height:1;
-      letter-spacing:-.05em;
+      letter-spacing:-.055em;
       margin:0 0 18px;
     }
 
     .form-intro p{
       color:#475569;
+      font-size:1.08rem;
     }
 
     .form-card{
       background:#ffffff;
       border:1px solid #dbe3ef;
-      border-radius:26px;
-      padding:30px;
-      box-shadow:0 18px 45px rgba(15,23,42,.08);
+      border-radius:28px;
+      padding:32px;
+      box-shadow:0 18px 50px rgba(15,23,42,.10);
     }
 
     .form-card h2{
       color:#0f172a;
-      margin-top:0;
+      margin:0 0 10px;
+      line-height:1.05;
+      letter-spacing:-.035em;
     }
 
     .form-card p,
@@ -220,20 +396,21 @@
     }
 
     .growth-final{
-      padding:86px 0;
+      padding:90px 0;
       text-align:center;
       background:
         radial-gradient(circle at top left, rgba(245,158,11,.24), transparent 35%),
+        radial-gradient(circle at top right, rgba(37,99,235,.28), transparent 40%),
         linear-gradient(135deg,#111827,#020617);
       color:#ffffff;
     }
 
     .growth-final h2{
       color:#ffffff;
-      font-size:clamp(2.1rem,5vw,4rem);
+      font-size:clamp(2.2rem,5vw,4rem);
       line-height:1;
       letter-spacing:-.06em;
-      max-width:850px;
+      max-width:900px;
       margin:0 auto 18px;
     }
 
@@ -244,15 +421,44 @@
       font-size:1.12rem;
     }
 
-    @media(max-width:900px){
+    @media(max-width:1000px){
       .growth-grid,
-      .growth-cards,
+      .proof-panel,
+      .fit-grid,
       .form-wrap{
         grid-template-columns:1fr;
       }
 
+      .growth-cards,
+      .growth-cards.four,
+      .process{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media(max-width:640px){
+      .growth-hero,
+      .growth-section,
+      .growth-final{
+        padding:58px 0;
+      }
+
+      .growth-cards,
+      .growth-cards.four,
+      .process,
       .mini-grid{
         grid-template-columns:1fr;
+      }
+
+      .hero-actions .btn{
+        width:100%;
+      }
+
+      .proof-panel,
+      .form-card,
+      .fit-list,
+      .growth-card{
+        padding:24px;
       }
     }
   </style>
@@ -273,7 +479,13 @@
           <p class="subhead">
             A focused review of your website, SEO, ads, tracking, and lead flow so you can see what is working, what is broken, and what needs to happen next.
           </p>
-          <a class="btn btn-primary" href="#growth-form">Book a Growth Review</a>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#growth-form">Schedule My Growth Review</a>
+            <a class="btn btn-ghost" href="case-studies.html">View Case Studies</a>
+          </div>
+
+          <p class="hero-note"><span>✓</span> Built for owners who need clear next steps, not another vague marketing conversation.</p>
         </div>
 
         <aside class="growth-card">
@@ -283,10 +495,10 @@
           </p>
 
           <div class="mini-grid">
-            <div>Lost Lead Opportunities</div>
-            <div>Conversion Bottlenecks</div>
-            <div>Search Visibility Gaps</div>
-            <div>Tracking & Attribution Errors</div>
+            <div><span>Lead Flow</span>Lost Lead Opportunities</div>
+            <div><span>Website</span>Conversion Bottlenecks</div>
+            <div><span>Search</span>Visibility Gaps</div>
+            <div><span>Data</span>Tracking & Attribution Errors</div>
           </div>
 
           <a class="btn btn-primary" href="#growth-form">Get My Growth Review</a>
@@ -297,24 +509,35 @@
     <section class="growth-section">
       <div class="container">
         <div class="growth-head">
-          <h2>Businesses Don't Hire Marketing.</h2>
-          <p>They hire results.</p>
+          <h2>What You'll Walk Away With</h2>
+          <p>
+            The Growth Review is designed to give you clarity, direction, and a practical path toward better results.
+          </p>
         </div>
 
-        <div class="growth-cards">
+        <div class="growth-cards four">
           <article class="growth-box">
+            <strong>Outcome 01</strong>
             <h3>More Qualified Leads</h3>
-            <p>Generate opportunities from people already searching for your services.</p>
+            <p>Find where your site, search visibility, and ads can create stronger lead opportunities.</p>
           </article>
 
           <article class="growth-box">
+            <strong>Outcome 02</strong>
             <h3>Better Visibility</h3>
-            <p>Improve how often your business appears when customers are looking for solutions.</p>
+            <p>Understand what needs to improve so your business shows up when customers are searching.</p>
           </article>
 
           <article class="growth-box">
-            <h3>Better Decision Making</h3>
-            <p>Know exactly what is working and what is wasting money.</p>
+            <strong>Outcome 03</strong>
+            <h3>Better Decisions</h3>
+            <p>Know what is working, what is unclear, and what may be wasting time or money.</p>
+          </article>
+
+          <article class="growth-box">
+            <strong>Outcome 04</strong>
+            <h3>Clear Next Steps</h3>
+            <p>Leave knowing what to fix first instead of guessing where to spend effort and budget.</p>
           </article>
         </div>
       </div>
@@ -325,65 +548,27 @@
         <div class="growth-head">
           <h2>This is not a generic marketing call.</h2>
           <p>
-            It is a practical review of your current growth system so you can identify the highest-impact next move.
+            It is a practical review of the full growth system: website, SEO, ads, tracking, reporting, offer clarity, and lead flow.
           </p>
         </div>
 
         <div class="growth-cards">
           <article class="growth-box">
-            <h3>Your website may be getting traffic but not converting it.</h3>
+            <strong>Website</strong>
+            <h3>Your traffic may not be converting.</h3>
             <p>We review the message, page flow, trust proof, calls-to-action, mobile experience, and lead path.</p>
           </article>
 
           <article class="growth-box">
-            <h3>Your ads may be spending without enough clarity.</h3>
+            <strong>Paid Search</strong>
+            <h3>Your ad spend may lack clarity.</h3>
             <p>We look at campaign structure, search intent, wasted spend, landing pages, and conversion tracking.</p>
           </article>
 
           <article class="growth-box">
-            <h3>Your data may not be telling the full story.</h3>
+            <strong>Analytics</strong>
+            <h3>Your data may not tell the full story.</h3>
             <p>We check whether GA4, forms, calls, key events, and reports are helping you make better decisions.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="growth-section dark">
-      <div class="container">
-        <div class="growth-head">
-          <h2>What you get from the Growth Review</h2>
-          <p>A clear view of the current system and the priority fixes that can improve results.</p>
-        </div>
-
-        <div class="growth-cards">
-          <article class="growth-box">
-            <h3>Website Conversion Review</h3>
-            <p>Homepage, service pages, CTAs, proof, offer clarity, and sales flow.</p>
-          </article>
-
-          <article class="growth-box">
-            <h3>SEO & Search Review</h3>
-            <p>Search visibility, indexing, page intent, local opportunity, and content gaps.</p>
-          </article>
-
-          <article class="growth-box">
-            <h3>Ads & Lead Review</h3>
-            <p>Google Ads structure, lead quality, landing page alignment, and wasted spend signals.</p>
-          </article>
-
-          <article class="growth-box">
-            <h3>Tracking Review</h3>
-            <p>GA4, key events, form tracking, call tracking, and reporting accuracy.</p>
-          </article>
-
-          <article class="growth-box">
-            <h3>Offer Review</h3>
-            <p>We check whether the offer is clear, specific, believable, and strong enough.</p>
-          </article>
-
-          <article class="growth-box">
-            <h3>Priority Action Plan</h3>
-            <p>You leave with a practical next-step direction, not vague marketing noise.</p>
           </article>
         </div>
       </div>
@@ -392,31 +577,134 @@
     <section class="growth-section">
       <div class="container">
         <div class="growth-head">
-          <h2>Real Work. Real Results.</h2>
+          <h2>How the Growth Review Works</h2>
           <p>
-            We focus on measurable improvements, clear reporting, and documented execution.
+            Simple, direct, and built around finding the highest-impact opportunities first.
           </p>
+        </div>
+
+        <div class="process">
+          <article class="step">
+            <h3>Submit your business</h3>
+            <p>Send your website, goals, current concerns, and what you are trying to improve.</p>
+          </article>
+
+          <article class="step">
+            <h3>We inspect the system</h3>
+            <p>We review your site, search visibility, ads, analytics, lead path, and trust signals.</p>
+          </article>
+
+          <article class="step">
+            <h3>We identify the gaps</h3>
+            <p>We separate real growth issues from distractions so the next move becomes clearer.</p>
+          </article>
+
+          <article class="step">
+            <h3>You get direction</h3>
+            <p>You leave with practical recommendations for what should happen next.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="growth-section dark">
+      <div class="container">
+        <div class="growth-head">
+          <h2>What We Review</h2>
+          <p>A clear view of the current system and the priority fixes that can improve results.</p>
         </div>
 
         <div class="growth-cards">
           <article class="growth-box">
-            <h3>SEO Audits</h3>
-            <p>Technical audits, search visibility reviews, content planning, and implementation guidance.</p>
+            <strong>Conversion</strong>
+            <h3>Website Review</h3>
+            <p>Homepage, service pages, CTAs, proof, offer clarity, mobile experience, and sales flow.</p>
           </article>
 
           <article class="growth-box">
-            <h3>Google Ads Optimization</h3>
-            <p>Campaign structure improvements, conversion tracking, wasted spend reduction, and lead quality analysis.</p>
+            <strong>Visibility</strong>
+            <h3>SEO & Search Review</h3>
+            <p>Search visibility, indexing, page intent, local opportunity, internal links, and content gaps.</p>
           </article>
 
           <article class="growth-box">
-            <h3>Analytics & Reporting</h3>
-            <p>GA4 validation, event tracking, reporting clarity, and growth measurement systems.</p>
+            <strong>Paid Traffic</strong>
+            <h3>Ads & Lead Review</h3>
+            <p>Google Ads structure, lead quality, landing page alignment, search intent, and wasted spend signals.</p>
+          </article>
+
+          <article class="growth-box">
+            <strong>Measurement</strong>
+            <h3>Tracking Review</h3>
+            <p>GA4, key events, form tracking, call tracking, ecommerce tracking, and reporting accuracy.</p>
+          </article>
+
+          <article class="growth-box">
+            <strong>Positioning</strong>
+            <h3>Offer Review</h3>
+            <p>We check whether the offer is clear, specific, believable, and strong enough to move visitors to action.</p>
+          </article>
+
+          <article class="growth-box">
+            <strong>Priority</strong>
+            <h3>Action Plan</h3>
+            <p>You get practical direction for what to fix first, what to improve next, and what to stop wasting time on.</p>
           </article>
         </div>
+      </div>
+    </section>
 
-        <div class="proof-cta">
-          <a class="btn btn-primary" href="case-studies.html">View Case Studies</a>
+    <section class="growth-section alt">
+      <div class="container">
+        <div class="proof-panel">
+          <div>
+            <p class="eyebrow">Proof of Work</p>
+            <h2>Real Work. Real Results.</h2>
+            <p>
+              The Growth Review is built from the same work we use in active client accounts: audits, tracking fixes, SEO improvements, ad reviews, reporting systems, and conversion-focused page builds.
+            </p>
+            <a class="btn btn-primary" href="case-studies.html">View Full Case Studies</a>
+          </div>
+
+          <div class="proof-list">
+            <div class="proof-item">
+              <h3>Tracking Recovery</h3>
+              <p>Finding broken analytics, conversion events, forms, calls, and reporting gaps that hide what is really happening.</p>
+            </div>
+
+            <div class="proof-item">
+              <h3>Search Visibility Growth</h3>
+              <p>Improving technical SEO, content structure, page intent, internal linking, and local search visibility.</p>
+            </div>
+
+            <div class="proof-item">
+              <h3>Lead Generation Improvements</h3>
+              <p>Reducing wasted spend, improving lead quality, and aligning ads with landing pages and real business goals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="growth-section">
+      <div class="container fit-grid">
+        <div class="fit-copy">
+          <p class="eyebrow">Good Fit</p>
+          <h2>Is this review right for you?</h2>
+          <p>
+            This is for business owners who know there is growth potential but need a clearer picture of where the real issue is.
+          </p>
+        </div>
+
+        <div class="fit-list">
+          <ul>
+            <li>Website traffic but few leads</li>
+            <li>Running ads with unclear results</li>
+            <li>Unsure if SEO is helping</li>
+            <li>No confidence in tracking or reporting</li>
+            <li>Need a second opinion before hiring an agency</li>
+            <li>Want a practical growth plan instead of marketing noise</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -424,23 +712,22 @@
     <section class="growth-section alt" id="growth-form">
       <div class="container form-wrap">
         <div class="form-intro">
-          <p class="eyebrow">Book the review</p>
+          <p class="eyebrow">Book the Review</p>
           <h2>Let's Find Your Biggest Growth Opportunity.</h2>
           <p>
             Send your business name, website, and what you are trying to improve. We will review the details and reply with next steps.
           </p>
 
           <ul class="bullets">
-            <li>Website traffic but few leads</li>
-            <li>Running ads with unclear results</li>
-            <li>Unsure if SEO is helping</li>
-            <li>No confidence in reporting</li>
-            <li>Need a second opinion before hiring an agency</li>
+            <li>Your website and current offer</li>
+            <li>What you are trying to improve</li>
+            <li>Whether you are running ads</li>
+            <li>What success looks like in 90 days</li>
           </ul>
         </div>
 
         <div class="form-card">
-          <h2>Book My Growth Review</h2>
+          <h2>Schedule My Growth Review</h2>
           <p>This form sends your request directly to our inbox.</p>
 
           <form
@@ -477,7 +764,7 @@
             </label>
 
             <button class="btn btn-primary" id="submitBtn" type="submit">
-              Book My Growth Review
+              Schedule My Growth Review
             </button>
 
             <p class="muted tiny" id="formNote"></p>
@@ -490,9 +777,9 @@
       <div class="container">
         <h2>Ready to see what is really holding growth back?</h2>
         <p>
-          Schedule a Growth Review and get a clearer picture of what your website, SEO, ads, and tracking should do next.
+          Schedule a Growth Review and get a clearer picture of what your website, SEO, ads, tracking, and lead flow should do next.
         </p>
-        <a class="btn btn-primary" href="#growth-form">Book My Growth Review</a>
+        <a class="btn btn-primary" href="#growth-form">Schedule My Growth Review</a>
       </div>
     </section>
 
