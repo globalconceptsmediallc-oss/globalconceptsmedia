@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sales Presentation | Global Concepts Media</title>
+  <meta name="description" content="A live sales presentation page for small businesses ready to understand what is working, what is wasting money, and what growth opportunities are being missed." />
+
+  <style>
+    :root{
+      --bg:#07111f;
+      --bg2:#0b1628;
+      --panel:#101f36;
+      --panel2:#142744;
+      --text:#f4f7fb;
+      --muted:#b7c3d7;
+      --line:rgba(255,255,255,.14);
+      --gold:#f5b84b;
+      --blue:#4da3ff;
+      --green:#49d18d;
+      --red:#ff6b6b;
+      --shadow:0 24px 70px rgba(0,0,0,.35);
+      --radius:24px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(77,163,255,.18), transparent 34%),
+        radial-gradient(circle at top right, rgba(245,184,75,.15), transparent 30%),
+        linear-gradient(180deg,var(--bg),#050914 70%);
+      color:var(--text);
+      line-height:1.55;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max),calc(100% - 36px));margin:auto}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(7,17,31,.86);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand{
+      display:flex;
+      flex-direction:column;
+      line-height:1.1;
+      font-weight:900;
+      letter-spacing:.02em;
+    }
+
+    .brand small{
+      color:var(--gold);
+      font-weight:800;
+      margin-top:4px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:.68rem;
+    }
+
+    .navlinks{
+      display:flex;
+      gap:22px;
+      align-items:center;
+      color:var(--muted);
+      font-weight:750;
+      font-size:.92rem;
+    }
+
+    .navlinks a:hover{color:white}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 20px;
+      border-radius:999px;
+      font-weight:900;
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow:0 14px 34px rgba(0,0,0,.25);
+      transition:.18s ease;
+      cursor:pointer;
+    }
+
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{
+      background:linear-gradient(135deg,var(--gold),#ffd37a);
+      color:#111827;
+      border:0;
+    }
+    .btn-secondary{
+      background:rgba(255,255,255,.08);
+      color:white;
+    }
+
+    section{padding:86px 0}
+    .hero{padding:92px 0 72px}
+
+    .grid{
+      display:grid;
+      grid-template-columns:1.12fr .88fr;
+      gap:34px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:#111827;
+      background:linear-gradient(135deg,var(--gold),#ffe2a3);
+      border-radius:999px;
+      padding:8px 13px;
+      font-weight:950;
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin:0 0 18px;
+    }
+
+    h1,h2,h3{line-height:1.06;margin:0}
+    h1{
+      font-size:clamp(2.65rem,6vw,5.9rem);
+      letter-spacing:-.065em;
+      max-width:950px;
+    }
+
+    h2{
+      font-size:clamp(2.05rem,4vw,4rem);
+      letter-spacing:-.045em;
+      margin-bottom:18px;
+    }
+
+    h3{
+      font-size:1.35rem;
+      letter-spacing:-.02em;
+      margin-bottom:10px;
+    }
+
+    .lead{
+      color:var(--muted);
+      font-size:clamp(1.08rem,1.7vw,1.35rem);
+      max-width:790px;
+      margin:24px 0 30px;
+    }
+
+    .hero-card,.card,.proof-panel{
+      background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.045));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .hero-card{
+      padding:28px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-card:before{
+      content:"";
+      position:absolute;
+      inset:-80px -80px auto auto;
+      width:220px;
+      height:220px;
+      background:rgba(245,184,75,.18);
+      border-radius:50%;
+    }
+
+    .score{
+      display:grid;
+      gap:14px;
+      position:relative;
+    }
+
+    .score-row{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      padding:18px;
+      border-radius:18px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.1);
+    }
+
+    .score-row strong{font-size:1.1rem}
+    .score-row span{color:var(--muted);font-weight:750}
+    .bad{color:var(--red)}
+    .good{color:var(--green)}
+    .gold{color:var(--gold)}
+
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      align-items:center;
+    }
+
+    .note{
+      color:var(--muted);
+      font-size:.95rem;
+      margin-top:16px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:34px;
+    }
+
+    .card{
+      padding:24px;
+    }
+
+    .card p{
+      color:var(--muted);
+      margin:0;
+    }
+
+    .icon{
+      width:44px;
+      height:44px;
+      border-radius:15px;
+      display:grid;
+      place-items:center;
+      background:rgba(245,184,75,.16);
+      color:var(--gold);
+      font-weight:1000;
+      margin-bottom:18px;
+    }
+
+    .dark-band{
+      background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:34px;
+      align-items:start;
+    }
+
+    .big-list{
+      display:grid;
+      gap:14px;
+    }
+
+    .list-item{
+      display:grid;
+      grid-template-columns:42px 1fr;
+      gap:15px;
+      padding:20px;
+      background:rgba(255,255,255,.07);
+      border:1px solid var(--line);
+      border-radius:20px;
+    }
+
+    .list-item b{display:block;margin-bottom:4px}
+    .list-item span{color:var(--muted)}
+
+    .num{
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:rgba(77,163,255,.15);
+      color:#b9ddff;
+      font-weight:1000;
+    }
+
+    .proof-panel{
+      padding:30px;
+      margin-top:30px;
+    }
+
+    .proof-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:22px;
+    }
+
+    .metric{
+      padding:20px;
+      border-radius:18px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.1);
+    }
+
+    .metric strong{
+      display:block;
+      font-size:1.65rem;
+      color:white;
+      line-height:1;
+      margin-bottom:8px;
+    }
+
+    .metric span{
+      color:var(--muted);
+      font-weight:750;
+      font-size:.92rem;
+    }
+
+    .process{
+      counter-reset:step;
+      display:grid;
+      gap:18px;
+      margin-top:34px;
+    }
+
+    .process .card{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:18px;
+      align-items:start;
+    }
+
+    .process .card:before{
+      counter-increment:step;
+      content:counter(step);
+      width:48px;
+      height:48px;
+      border-radius:16px;
+      background:linear-gradient(135deg,var(--gold),#ffe0a0);
+      color:#111827;
+      display:grid;
+      place-items:center;
+      font-weight:1000;
+      font-size:1.1rem;
+    }
+
+    .wins{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:34px;
+    }
+
+    .win{
+      padding:26px;
+      border-radius:24px;
+      background:linear-gradient(180deg,rgba(245,184,75,.14),rgba(255,255,255,.05));
+      border:1px solid rgba(245,184,75,.26);
+    }
+
+    .win strong{
+      color:var(--gold);
+      display:block;
+      margin-bottom:10px;
+      font-size:.86rem;
+      text-transform:uppercase;
+      letter-spacing:.09em;
+    }
+
+    .offer{
+      text-align:center;
+      padding:58px 32px;
+      background:
+        radial-gradient(circle at top,rgba(245,184,75,.2),transparent 35%),
+        linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.05));
+      border:1px solid rgba(245,184,75,.25);
+      border-radius:32px;
+      box-shadow:var(--shadow);
+    }
+
+    .offer h2{max-width:880px;margin:0 auto 18px}
+    .offer p{max-width:760px;margin:0 auto 28px;color:var(--muted);font-size:1.15rem}
+
+    footer{
+      padding:38px 0;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+    }
+
+    footer .wrap{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    @media(max-width:900px){
+      .grid,.split{grid-template-columns:1fr}
+      .cards,.wins,.proof-grid{grid-template-columns:1fr}
+      .navlinks a:not(.btn){display:none}
+      section{padding:64px 0}
+      .hero{padding-top:66px}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="/">
+        Global Concepts Media
+        <small>Growth systems for local business</small>
+      </a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="/case-studies">Proof</a>
+        <a href="/growth-review">Growth Review</a>
+        <a href="/seo">SEO</a>
+        <a href="/google-ads">Google Ads</a>
+        <a class="btn btn-primary" href="/growth-review">Schedule Review</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap grid">
+        <div>
+          <p class="eyebrow">Sales Presentation</p>
+          <h1>Most businesses do not have a marketing problem. They have a visibility, tracking, and follow-through problem.</h1>
+          <p class="lead">
+            This page is built for one conversation: helping business owners see what is working, what is wasting money, and where the next real growth opportunity is hiding.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/growth-review">Schedule a Growth Review</a>
+            <a class="btn btn-secondary" href="/case-studies">See Proof of Work</a>
+          </div>
+          <p class="note">Built for local service companies, retail businesses, and owners who want better answers before spending more money.</p>
+        </div>
+
+        <aside class="hero-card" aria-label="Marketing review snapshot">
+          <div class="score">
+            <div class="score-row">
+              <strong>Ad spend</strong>
+              <span class="bad">Often leaking</span>
+            </div>
+            <div class="score-row">
+              <strong>Website traffic</strong>
+              <span class="gold">Usually unclear</span>
+            </div>
+            <div class="score-row">
+              <strong>Tracking</strong>
+              <span class="bad">Often broken</span>
+            </div>
+            <div class="score-row">
+              <strong>Sales path</strong>
+              <span class="gold">Needs tightening</span>
+            </div>
+            <div class="score-row">
+              <strong>Opportunity</strong>
+              <span class="good">Usually fixable</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="dark-band">
+      <div class="wrap">
+        <p class="eyebrow">The problem</p>
+        <h2>You may be paying for marketing, but still not know what is actually creating leads, calls, sales, or wasted spend.</h2>
+
+        <div class="cards">
+          <div class="card">
+            <div class="icon">01</div>
+            <h3>The website looks fine, but does not guide buyers.</h3>
+            <p>A good-looking site can still fail if it does not answer objections, build trust, and move people to action.</p>
+          </div>
+          <div class="card">
+            <div class="icon">02</div>
+            <h3>Ads may be spending without clean accountability.</h3>
+            <p>If calls, forms, purchases, and lead quality are not tracked correctly, the budget gets harder to control.</p>
+          </div>
+          <div class="card">
+            <div class="icon">03</div>
+            <h3>SEO may be active, but not structured for growth.</h3>
+            <p>Many businesses have content, but no authority map, city/service strategy, or conversion path.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Cost of doing nothing</p>
+          <h2>The expensive part is not always the marketing spend. It is the uncertainty.</h2>
+          <p class="lead">
+            When you cannot clearly see what is working, every decision becomes a guess. That means good campaigns may get cut, bad campaigns may continue, and real opportunities may sit untouched.
+          </p>
+        </div>
+
+        <div class="big-list">
+          <div class="list-item">
+            <div class="num">1</div>
+            <div><b>Wasted ad budget keeps repeating.</b><span>Money goes out every month without enough clarity on what should be scaled or stopped.</span></div>
+          </div>
+          <div class="list-item">
+            <div class="num">2</div>
+            <div><b>Good leads slip through weak pages.</b><span>Visitors arrive, hesitate, compare, and leave because the page did not close the trust gap.</span></div>
+          </div>
+          <div class="list-item">
+            <div class="num">3</div>
+            <div><b>Competitors build authority while you wait.</b><span>Local rankings, reviews, content, and proof assets compound over time.</span></div>
+          </div>
+          <div class="list-item">
+            <div class="num">4</div>
+            <div><b>The owner stays stuck in “I think.”</b><span>The goal is to replace guesswork with a simple growth plan based on evidence.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-band">
+      <div class="wrap">
+        <p class="eyebrow">Proof of work</p>
+        <h2>We do not sell marketing theory. We document the work, the fixes, the wins, and the next move.</h2>
+        <p class="lead">
+          Global Concepts Media is built around hands-on execution: audits, tracking repairs, SEO structure, Google Ads cleanup, website rebuilds, conversion improvements, reporting, and client-ready proof of work.
+        </p>
+
+        <div class="proof-panel">
+          <h3>What business owners get from working this way</h3>
+          <div class="proof-grid">
+            <div class="metric"><strong>Clarity</strong><span>Know what is working</span></div>
+            <div class="metric"><strong>Control</strong><span>Reduce waste</span></div>
+            <div class="metric"><strong>Proof</strong><span>See completed work</span></div>
+            <div class="metric"><strong>Direction</strong><span>Know the next step</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <p class="eyebrow">What we do</p>
+        <h2>We build the growth system around the business, not a random pile of marketing tasks.</h2>
+
+        <div class="cards">
+          <div class="card">
+            <div class="icon">SEO</div>
+            <h3>Local SEO & authority structure</h3>
+            <p>City pages, service pages, content hubs, internal linking, technical cleanup, and search visibility planning.</p>
+          </div>
+          <div class="card">
+            <div class="icon">ADS</div>
+            <h3>Google Ads cleanup & management</h3>
+            <p>Campaign structure, conversion tracking, search intent, budget control, negative keywords, and lead quality review.</p>
+          </div>
+          <div class="card">
+            <div class="icon">WEB</div>
+            <h3>Conversion-focused websites</h3>
+            <p>Pages built to explain, prove, reduce hesitation, and move visitors toward calls, forms, and sales.</p>
+          </div>
+          <div class="card">
+            <div class="icon">DATA</div>
+            <h3>Analytics & tracking repair</h3>
+            <p>GA4, Search Console, event tracking, conversion validation, and cleaner reporting so decisions are not guesses.</p>
+          </div>
+          <div class="card">
+            <div class="icon">CRO</div>
+            <h3>Sales path improvement</h3>
+            <p>Better CTAs, stronger proof, clearer offers, reduced friction, and page-by-page conversion improvements.</p>
+          </div>
+          <div class="card">
+            <div class="icon">POW</div>
+            <h3>Proof-of-work reporting</h3>
+            <p>Documented work logs, weekly wins, client recaps, and clear next actions that owners can understand.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-band">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Why it works</p>
+          <h2>Growth gets easier when every piece connects.</h2>
+          <p class="lead">
+            Ads, SEO, website pages, tracking, and reporting should not operate separately. They should support one simple outcome: more qualified buyers taking the next step.
+          </p>
+        </div>
+
+        <div class="process">
+          <div class="card">
+            <div>
+              <h3>Find the leaks</h3>
+              <p>We look for broken tracking, weak pages, wasted spend, missing proof, poor structure, and unclear offers.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <h3>Fix the foundation</h3>
+              <p>Before scaling anything, we clean up the pieces that prevent owners from seeing results clearly.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <h3>Build the growth path</h3>
+              <p>We connect search, ads, pages, CTAs, offers, and reporting into a system that can improve over time.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <h3>Document the wins</h3>
+              <p>The business owner should always know what changed, why it matters, and what the next best move is.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <p class="eyebrow">Recent wins</p>
+        <h2>Examples of the type of work that creates momentum.</h2>
+
+        <div class="wins">
+          <div class="win">
+            <strong>Tracking repair</strong>
+            <h3>Found missing analytics signals</h3>
+            <p>Identified when traffic and conversion data were not properly firing, creating a clearer path to measurement.</p>
+          </div>
+          <div class="win">
+            <strong>Ad account cleanup</strong>
+            <h3>Removed confusion inside campaign goals</h3>
+            <p>Cleaned up inactive or misleading conversion actions so campaigns could optimize toward better signals.</p>
+          </div>
+          <div class="win">
+            <strong>SEO structure</strong>
+            <h3>Built stronger local authority architecture</h3>
+            <p>Created cleaner city, service, and internal-linking structures designed to support long-term visibility.</p>
+          </div>
+          <div class="win">
+            <strong>Website rebuild</strong>
+            <h3>Turned pages into sales assets</h3>
+            <p>Rebuilt key pages to improve clarity, trust, offer strength, and next-step conversion flow.</p>
+          </div>
+          <div class="win">
+            <strong>Proof of work</strong>
+            <h3>Made invisible work visible</h3>
+            <p>Created documentation systems so business owners can see exactly what was done and why it mattered.</p>
+          </div>
+          <div class="win">
+            <strong>Growth review</strong>
+            <h3>Created a better first step</h3>
+            <p>Built a clear review offer to help prospects diagnose problems before committing to a larger engagement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="offer">
+          <p class="eyebrow">The offer</p>
+          <h2>Start with a Growth Review before spending more money on marketing.</h2>
+          <p>
+            We will look at your website, search visibility, ads, tracking, conversion path, and missed opportunities. You will leave with a clearer understanding of what is working, what is not, and what should happen next.
+          </p>
+          <div class="cta-row" style="justify-content:center">
+            <a class="btn btn-primary" href="/growth-review">Schedule a Growth Review</a>
+            <a class="btn btn-secondary" href="/contact">Talk to Global Concepts Media</a>
+          </div>
+          <p class="note">Best fit for owners who want clarity, accountability, and a practical plan before committing more budget.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div><strong>Global Concepts Media</strong><br>Marketing clarity. Better systems. Measurable growth.</div>
+      <div>© <span id="year"></span> Global Concepts Media. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
