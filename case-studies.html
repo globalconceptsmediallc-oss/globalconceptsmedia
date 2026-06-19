@@ -14,11 +14,294 @@
     gtag('config', 'G-0SN72D1GNG', { anonymize_ip: true });
   </script>
 
-  <title>Case Studies | Global Concepts Media</title>
+  <title>Case Studies | Proof of Work | Global Concepts Media</title>
 
   <link rel="icon" href="./images/logo.jpg" />
   <link rel="stylesheet" href="./styles.css?v=20260618-case10" />
   <script defer src="./shared.js?v=20260618-case10"></script>
+
+  <style>
+    .case-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 92px 0 72px;
+      background:
+        radial-gradient(circle at top left, rgba(64, 148, 255, .28), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(255, 180, 70, .18), transparent 34%);
+    }
+
+    .case-hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -120px -180px auto;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.05);
+      filter: blur(2px);
+      pointer-events: none;
+    }
+
+    .case-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .case-hero h1 {
+      max-width: 980px;
+      font-size: clamp(2.7rem, 6vw, 5.7rem);
+      line-height: .95;
+      letter-spacing: -0.07em;
+      margin-bottom: 24px;
+    }
+
+    .case-hero .subhead {
+      max-width: 790px;
+      font-size: clamp(1.08rem, 2vw, 1.34rem);
+      line-height: 1.65;
+    }
+
+    .trust-strip {
+      margin-top: 38px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .trust-item {
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.18);
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 1.05rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .trust-item span {
+      color: rgba(255,255,255,.74);
+      font-size: .93rem;
+      line-height: 1.45;
+    }
+
+    .proof-path {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .proof-step {
+      position: relative;
+      padding: 28px;
+      border-radius: 26px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.035));
+      min-height: 245px;
+    }
+
+    .proof-step .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      color: #fff;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .proof-step h3 {
+      font-size: 1.65rem;
+      letter-spacing: -0.035em;
+      margin-bottom: 12px;
+    }
+
+    .proof-step p {
+      line-height: 1.65;
+    }
+
+    .case-stack {
+      display: grid;
+      gap: 24px;
+      margin-top: 34px;
+    }
+
+    .case-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      padding: clamp(24px, 4vw, 38px);
+      border: 1px solid rgba(255,255,255,.13);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.085), rgba(255,255,255,.035)),
+        rgba(255,255,255,.025);
+      box-shadow: 0 26px 80px rgba(0,0,0,.22);
+    }
+
+    .case-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 7px;
+      background: linear-gradient(180deg, #4fa3ff, #f2b84b);
+    }
+
+    .case-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+
+    .case-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.09);
+      color: rgba(255,255,255,.78);
+      font-size: .78rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      margin-bottom: 14px;
+    }
+
+    .case-card h3 {
+      font-size: clamp(1.75rem, 3vw, 2.45rem);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      margin-bottom: 12px;
+    }
+
+    .result-badge {
+      flex: 0 0 auto;
+      border-radius: 999px;
+      padding: 12px 15px;
+      background: rgba(99, 230, 190, .14);
+      border: 1px solid rgba(99, 230, 190, .28);
+      color: #ccfff0;
+      font-weight: 900;
+      font-size: .9rem;
+      white-space: nowrap;
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .case-box {
+      border-radius: 22px;
+      padding: 20px;
+      background: rgba(0,0,0,.18);
+      border: 1px solid rgba(255,255,255,.11);
+    }
+
+    .case-box h4 {
+      margin-bottom: 8px;
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: #f2b84b;
+    }
+
+    .case-box p {
+      margin: 0;
+      color: rgba(255,255,255,.78);
+      line-height: 1.6;
+    }
+
+    .leak-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .leak-card {
+      border-radius: 24px;
+      padding: 24px;
+      background: rgba(255,255,255,.055);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .leak-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      letter-spacing: -0.025em;
+    }
+
+    .growth-review-box {
+      border-radius: 34px;
+      padding: clamp(30px, 5vw, 54px);
+      background:
+        radial-gradient(circle at top left, rgba(79,163,255,.24), transparent 36%),
+        linear-gradient(135deg, rgba(255,255,255,.10), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 30px 90px rgba(0,0,0,.24);
+    }
+
+    .growth-review-inner {
+      display: grid;
+      grid-template-columns: 1.5fr .8fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .growth-review-inner h2 {
+      font-size: clamp(2.1rem, 4vw, 3.6rem);
+      letter-spacing: -0.06em;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .review-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .review-list div {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(0,0,0,.16);
+      border: 1px solid rgba(255,255,255,.10);
+      color: rgba(255,255,255,.82);
+      font-weight: 700;
+    }
+
+    @media (max-width: 900px) {
+      .trust-strip,
+      .proof-path,
+      .case-grid,
+      .leak-grid,
+      .growth-review-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .case-top {
+        flex-direction: column;
+      }
+
+      .result-badge {
+        white-space: normal;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -32,30 +315,32 @@
         <p class="eyebrow">Case Studies</p>
 
         <h1>
-          We find the leak. <span class="grad">Then we prove the fix.</span>
+          Proof beats promises.
+          <span class="grad">We find the leak, fix the leak, and prove what changed.</span>
         </h1>
 
         <p class="subhead">
-          Most businesses do not need more marketing activity. They need to know what is broken,
-          what is costing them leads, and what needs to be fixed first.
+          Most businesses are not losing because they need “more marketing.” They are losing because
+          something inside the system is leaking traffic, leads, visibility, or trust. These are examples
+          of the kind of work we do to find the real problem and repair it.
         </p>
 
-        <div class="hero-proof-grid">
-          <div class="proof-stat">
-            <strong>Tracking</strong>
-            <span>repaired</span>
+        <div class="trust-strip">
+          <div class="trust-item">
+            <strong>Tracking Repaired</strong>
+            <span>So decisions are based on real activity.</span>
           </div>
-          <div class="proof-stat">
-            <strong>SEO leaks</strong>
-            <span>reduced</span>
+          <div class="trust-item">
+            <strong>Visibility Recovered</strong>
+            <span>So pages and products can be found again.</span>
           </div>
-          <div class="proof-stat">
-            <strong>Lead paths</strong>
-            <span>clarified</span>
+          <div class="trust-item">
+            <strong>Lead Paths Clarified</strong>
+            <span>So traffic has a better chance to turn into business.</span>
           </div>
-          <div class="proof-stat">
-            <strong>Visibility</strong>
-            <span>recovered</span>
+          <div class="trust-item">
+            <strong>Proof Documented</strong>
+            <span>So owners can see what was fixed.</span>
           </div>
         </div>
 
@@ -69,39 +354,38 @@
     <section class="section proof-intro">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Proof Framework</p>
-          <h2>Reports show symptoms. Diagnostics find the cause.</h2>
+          <p class="eyebrow">Our Proof Framework</p>
+          <h2>Every win starts with a diagnostic.</h2>
           <p class="muted">
-            Every case study follows the same process: identify the hidden problem, repair the system,
-            and document what changed.
+            We do not start by guessing. We look for the leak, repair the system, and prove the result.
           </p>
         </div>
 
-        <div class="grid-3 punch-cards">
-          <article class="card">
-            <span class="card-number">01</span>
+        <div class="proof-path">
+          <article class="proof-step">
+            <span class="num">01</span>
             <h3>Find the Leak</h3>
             <p class="muted">
-              We look for broken tracking, weak visibility, wasted ad spend, bad crawl paths,
-              product feed issues, and lost lead opportunities.
+              We look for broken tracking, weak pages, wasted ad spend, feed errors, crawl issues,
+              redirect problems, missing conversion paths, and local visibility gaps.
             </p>
           </article>
 
-          <article class="card">
-            <span class="card-number">02</span>
+          <article class="proof-step">
+            <span class="num">02</span>
             <h3>Fix the System</h3>
             <p class="muted">
-              We repair the part of the system that is holding growth back: pages, data, campaigns,
-              feeds, redirects, links, or reporting.
+              We repair the part of the system that is costing the business leads, rankings, data,
+              sales opportunities, or trust.
             </p>
           </article>
 
-          <article class="card">
-            <span class="card-number">03</span>
-            <h3>Prove the Result</h3>
+          <article class="proof-step">
+            <span class="num">03</span>
+            <h3>Prove the Change</h3>
             <p class="muted">
-              We connect the fix to visible business impact so owners can make decisions
-              with confidence instead of guessing.
+              We document what changed so business owners can stop guessing and make smarter
+              marketing decisions.
             </p>
           </article>
         </div>
@@ -112,136 +396,155 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Real Work</p>
-          <h2>Five examples of hidden marketing leaks.</h2>
+          <h2>Examples of leaks we found, fixed, and proved.</h2>
           <p class="muted">
-            These examples are anonymous where needed. The goal is simple: show the problem,
-            the fix, and the business impact.
+            Some examples are anonymous by design. The point is not hype. The point is proof.
           </p>
         </div>
 
         <div class="case-stack">
 
-          <article class="case-feature card">
-            <div class="case-label">Case Study 01</div>
-            <div class="case-main">
+          <article class="case-card">
+            <div class="case-top">
               <div>
-                <h3>Merchant Center Recovery</h3>
+                <div class="case-label">Case Study 01</div>
+                <h3>Merchant Center visibility recovery</h3>
                 <p class="muted">
-                  Products were active, but visibility was being blocked by feed issues,
-                  product data gaps, and platform warnings.
+                  Products were live, but visibility was being held back by product data issues,
+                  platform warnings, and feed problems.
                 </p>
               </div>
               <div class="result-badge">Visibility Recovered</div>
             </div>
 
-            <div class="before-after">
-              <div class="before-box">
-                <h4>Before</h4>
-                <p>Product visibility was limited and Shopping performance was being held back.</p>
+            <div class="case-grid">
+              <div class="case-box">
+                <h4>Found</h4>
+                <p>Shopping visibility was blocked by feed quality problems and product data gaps.</p>
               </div>
-              <div class="after-box">
-                <h4>After</h4>
-                <p>Feed issues were cleaned up, eligibility improved, and products had a clearer path to search visibility.</p>
+              <div class="case-box">
+                <h4>Fixed</h4>
+                <p>Cleaned up product data, improved eligibility signals, and reduced account friction.</p>
+              </div>
+              <div class="case-box">
+                <h4>Proved</h4>
+                <p>The business had a cleaner path for products to appear and compete again.</p>
               </div>
             </div>
           </article>
 
-          <article class="case-feature card">
-            <div class="case-label">Case Study 02</div>
-            <div class="case-main">
+          <article class="case-card">
+            <div class="case-top">
               <div>
-                <h3>Analytics Recovery</h3>
+                <div class="case-label">Case Study 02</div>
+                <h3>Analytics and conversion tracking recovery</h3>
                 <p class="muted">
-                  The business could not trust its reporting because traffic and conversion activity
+                  The business could not trust the numbers because important traffic and lead actions
                   were not being measured correctly.
                 </p>
               </div>
               <div class="result-badge">Data Restored</div>
             </div>
 
-            <div class="before-after">
-              <div class="before-box">
-                <h4>Before</h4>
-                <p>Tracking was missing, duplicated, incomplete, or not firing on important business actions.</p>
+            <div class="case-grid">
+              <div class="case-box">
+                <h4>Found</h4>
+                <p>Tracking was missing, duplicated, incomplete, or disconnected from real business actions.</p>
               </div>
-              <div class="after-box">
-                <h4>After</h4>
-                <p>Tags were verified, events were tested, and reporting became useful for real decisions.</p>
+              <div class="case-box">
+                <h4>Fixed</h4>
+                <p>Verified tags, tested events, cleaned up reporting, and connected key actions.</p>
+              </div>
+              <div class="case-box">
+                <h4>Proved</h4>
+                <p>The business could finally read its traffic, forms, calls, and sales activity with confidence.</p>
               </div>
             </div>
           </article>
 
-          <article class="case-feature card">
-            <div class="case-label">Case Study 03</div>
-            <div class="case-main">
+          <article class="case-card">
+            <div class="case-top">
               <div>
-                <h3>Technical SEO Recovery</h3>
+                <div class="case-label">Case Study 03</div>
+                <h3>Technical SEO authority protection</h3>
                 <p class="muted">
-                  Search visibility was being weakened by duplicate URL patterns, redirect issues,
-                  sitemap conflicts, and crawl confusion.
+                  Search visibility was being weakened by duplicate URL patterns, redirect problems,
+                  sitemap conflicts, and unclear canonical signals.
                 </p>
               </div>
               <div class="result-badge">Authority Protected</div>
             </div>
 
-            <div class="before-after">
-              <div class="before-box">
-                <h4>Before</h4>
-                <p>Search engines were receiving mixed signals from redirects, canonicals, and internal links.</p>
+            <div class="case-grid">
+              <div class="case-box">
+                <h4>Found</h4>
+                <p>Search engines were receiving mixed signals from redirects, links, canonicals, and page versions.</p>
               </div>
-              <div class="after-box">
-                <h4>After</h4>
-                <p>Crawl paths became cleaner, authority leaks were reduced, and indexing signals became easier to understand.</p>
+              <div class="case-box">
+                <h4>Fixed</h4>
+                <p>Cleaned crawl paths, improved sitemap consistency, and reduced authority leaks.</p>
+              </div>
+              <div class="case-box">
+                <h4>Proved</h4>
+                <p>The site became easier for search engines to understand, crawl, and index correctly.</p>
               </div>
             </div>
           </article>
 
-          <article class="case-feature card">
-            <div class="case-label">Case Study 04</div>
-            <div class="case-main">
+          <article class="case-card">
+            <div class="case-top">
               <div>
-                <h3>Local Visibility Recovery</h3>
+                <div class="case-label">Case Study 04</div>
+                <h3>Local visibility and service-area structure</h3>
                 <p class="muted">
                   A local business needed stronger city-level visibility and a clearer connection
-                  between services, locations, and customer intent.
+                  between services, locations, and search intent.
                 </p>
               </div>
               <div class="result-badge">Local Signals Strengthened</div>
             </div>
 
-            <div class="before-after">
-              <div class="before-box">
-                <h4>Before</h4>
+            <div class="case-grid">
+              <div class="case-box">
+                <h4>Found</h4>
                 <p>Service pages and city pages were not supporting each other clearly enough.</p>
               </div>
-              <div class="after-box">
-                <h4>After</h4>
-                <p>Location structure, internal linking, and service coverage were strengthened for better local relevance.</p>
+              <div class="case-box">
+                <h4>Fixed</h4>
+                <p>Improved service coverage, city structure, internal linking, and local relevance signals.</p>
+              </div>
+              <div class="case-box">
+                <h4>Proved</h4>
+                <p>The site had a clearer path to compete for local searches in the areas that matter.</p>
               </div>
             </div>
           </article>
 
-          <article class="case-feature card">
-            <div class="case-label">Case Study 05</div>
-            <div class="case-main">
+          <article class="case-card">
+            <div class="case-top">
               <div>
-                <h3>Lead Generation Recovery</h3>
+                <div class="case-label">Case Study 05</div>
+                <h3>Paid search lead path cleanup</h3>
                 <p class="muted">
-                  Paid traffic was active, but the path from visitor to qualified lead was unclear
-                  and difficult to measure.
+                  Ads were running, but the path from search intent to qualified lead was unclear,
+                  difficult to measure, and too easy to waste.
                 </p>
               </div>
               <div class="result-badge">Lead Path Clarified</div>
             </div>
 
-            <div class="before-after">
-              <div class="before-box">
-                <h4>Before</h4>
-                <p>Campaigns were spending without enough clarity around search intent, lead quality, and conversion actions.</p>
+            <div class="case-grid">
+              <div class="case-box">
+                <h4>Found</h4>
+                <p>Spend was active, but lead quality, conversion goals, and search intent were not clear enough.</p>
               </div>
-              <div class="after-box">
-                <h4>After</h4>
-                <p>Conversion goals, campaign structure, search terms, and the lead path became easier to evaluate.</p>
+              <div class="case-box">
+                <h4>Fixed</h4>
+                <p>Improved campaign structure, conversion tracking, search-term review, and landing-page intent.</p>
+              </div>
+              <div class="case-box">
+                <h4>Proved</h4>
+                <p>The business had a cleaner way to evaluate what traffic was worth paying for.</p>
               </div>
             </div>
           </article>
@@ -254,41 +557,41 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">What We Usually Find</p>
-          <h2>The problem is rarely one thing.</h2>
+          <h2>The leak is rarely just one thing.</h2>
           <p class="muted">
-            Growth usually leaks through several small cracks at the same time.
+            Growth usually disappears through several small cracks at the same time.
           </p>
         </div>
 
-        <div class="grid-3">
-          <article class="card mini-card">
+        <div class="leak-grid">
+          <article class="leak-card">
             <h3>Broken Tracking</h3>
             <p class="muted">Missing tags, bad events, duplicate analytics, and unreliable conversion data.</p>
           </article>
 
-          <article class="card mini-card">
+          <article class="leak-card">
             <h3>Shopping Visibility Issues</h3>
-            <p class="muted">Feed errors, product data gaps, Merchant Center warnings, and weak catalog structure.</p>
+            <p class="muted">Feed errors, weak product data, Merchant Center warnings, and catalog gaps.</p>
           </article>
 
-          <article class="card mini-card">
+          <article class="leak-card">
             <h3>SEO Authority Leaks</h3>
-            <p class="muted">Redirect loops, duplicate URLs, weak canonicals, broken pages, and crawl confusion.</p>
+            <p class="muted">Redirect loops, duplicate URLs, bad canonicals, sitemap conflicts, and crawl confusion.</p>
           </article>
 
-          <article class="card mini-card">
+          <article class="leak-card">
+            <h3>Weak Lead Paths</h3>
+            <p class="muted">Traffic arrives, but the next step is unclear or not strong enough to convert.</p>
+          </article>
+
+          <article class="leak-card">
             <h3>Local Visibility Gaps</h3>
-            <p class="muted">Service pages and city pages that do not clearly support each other.</p>
+            <p class="muted">Service pages, city pages, and business intent are not connected tightly enough.</p>
           </article>
 
-          <article class="card mini-card">
-            <h3>Lead Quality Problems</h3>
-            <p class="muted">Traffic that arrives without a clear path to qualified calls, forms, or sales opportunities.</p>
-          </article>
-
-          <article class="card mini-card">
+          <article class="leak-card">
             <h3>Reporting Blind Spots</h3>
-            <p class="muted">Business decisions being made with incomplete, disconnected, or inaccurate data.</p>
+            <p class="muted">Business owners are forced to make decisions from incomplete or misleading numbers.</p>
           </article>
         </div>
       </div>
@@ -296,20 +599,27 @@
 
     <section class="section final-cta">
       <div class="container">
-        <div class="callout card">
-          <div class="callout-inner">
+        <div class="growth-review-box">
+          <div class="growth-review-inner">
             <div>
-              <p class="eyebrow">Book a Growth Review</p>
+              <p class="eyebrow">Growth Review</p>
               <h2>Before you spend more, find out what is leaking.</h2>
               <p class="muted">
-                If your traffic, leads, tracking, product visibility, or local rankings are not where they should be,
-                the next step is a clear diagnostic review.
+                If your traffic, leads, tracking, product visibility, ads, or local rankings are not where they should be,
+                the next move is not guessing. The next move is a Growth Review.
               </p>
+
+              <div class="cta-row">
+                <a class="btn btn-primary" href="./contact.html">Book a Growth Review</a>
+                <a class="btn btn-ghost" href="./sales-presentation.html">View Sales Presentation</a>
+              </div>
             </div>
 
-            <div class="callout-cta">
-              <a class="btn btn-primary" href="./contact.html">Book a Growth Review</a>
-              <a class="btn btn-ghost" href="./sales-presentation.html">View Sales Presentation</a>
+            <div class="review-list">
+              <div>Find the leak</div>
+              <div>Fix the system</div>
+              <div>Prove what changed</div>
+              <div>Decide what to do next</div>
             </div>
           </div>
         </div>
