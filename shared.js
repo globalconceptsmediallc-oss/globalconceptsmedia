@@ -1,6 +1,6 @@
 /* Global Concepts Media — shared UI + cache-busting */
 (() => {
-  const VERSION = "20260212";
+  const VERSION = "20260629";
 
   const IS_GITHUB_PAGES =
     window.location.hostname.includes("github.io");
@@ -8,10 +8,10 @@
   const BASE = IS_GITHUB_PAGES ? "/globalconceptsmedia" : "";
 
   const navItems = [
-    { href: `${BASE}/google-ads.html`, label: "Google Ads" },
-    { href: `${BASE}/seo.html`, label: "SEO" },
-    { href: `${BASE}/case-studies.html`, label: "Case Studies" },
-    { href: `${BASE}/contact.html`, label: "Contact" }
+    { href: `${BASE}/google-ads`, label: "Google Ads" },
+    { href: `${BASE}/seo`, label: "SEO" },
+    { href: `${BASE}/case-studies`, label: "Case Studies" },
+    { href: `${BASE}/contact`, label: "Contact" }
   ];
 
   function withV(url) {
@@ -25,6 +25,7 @@
     return path
       .split("?")[0]
       .replace(/\/index\.html$/, "/")
+      .replace(/\.html$/, "")
       .replace(/\/+$/, "") || "/";
   }
 
@@ -37,8 +38,8 @@
     if (!header) return;
 
     const current = window.location.pathname || "/";
-    const homeHref = `${BASE}/index.html`;
-    const contactHref = `${BASE}/contact.html`;
+    const homeHref = `${BASE}/`;
+    const contactHref = `${BASE}/contact`;
     const logoSrc = `${BASE}/images/logo.jpg`;
 
     const links = navItems.map((item) => {
@@ -96,11 +97,15 @@
             </div>
             <div class="copy">© ${year} Global Concepts Media. All rights reserved.</div>
           </div>
-          <div class="footer-links" aria-label="Footer links">
-            <a href="${BASE}/google-ads.html">Google Ads</a>
-            <a href="${BASE}/seo.html">SEO</a>
-            <a href="${BASE}/case-studies.html">Case Studies</a>
-            <a href="${BASE}/contact.html">Contact</a>
+
+          <div class="footer-links" aria-label="Footer navigation">
+            <a href="${BASE}/google-ads">Google Ads</a>
+            <a href="${BASE}/seo">SEO</a>
+            <a href="${BASE}/case-studies">Case Studies</a>
+            <a href="${BASE}/contact">Contact</a>
+            <a href="${BASE}/privacy">Privacy Policy</a>
+            <a href="${BASE}/terms">Terms of Service</a>
+            <a href="${BASE}/accessibility">Accessibility</a>
           </div>
         </div>
       </footer>
