@@ -40,7 +40,7 @@ const navItems = [
 
     const current = window.location.pathname || "/";
     const homeHref = `${BASE}/`;
-    const contactHref = `${BASE}/contact`;
+   const growthReviewHref = `${BASE}/growth-review`;
     const logoSrc = `${BASE}/images/logo.jpg`;
 
     const links = navItems.map((item) => {
@@ -70,9 +70,11 @@ const navItems = [
             ${links}
           </nav>
 
-          <div class="nav-cta">
-            <a class="btn btn-primary" href="${contactHref}">Book a consult</a>
-          </div>
+  <div class="nav-cta">
+  <a class="btn btn-primary" href="${growthReviewHref}">
+    Schedule a Growth Review
+  </a>
+</div>
         </div>
       </header>
     `;
