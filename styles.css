@@ -786,3 +786,69 @@ textarea{
     animation:none!important;
   }
 }
+/* =========================================================
+   Growth Review Page — Contrast Fix
+   ========================================================= */
+
+.growth-review,
+.growth-review body,
+body.growth-review{
+  background:#f6f9fc;
+  color:#0f172a;
+}
+
+.growth-review .card,
+.growth-review form,
+.growth-review .form-card,
+.growth-review .contact-card,
+.growth-review .review-form{
+  background:#ffffff;
+  color:#0f172a;
+  border:1px solid rgba(15,23,42,.12);
+  box-shadow:0 22px 60px rgba(15,23,42,.12);
+}
+
+.growth-review h1,
+.growth-review h2,
+.growth-review h3,
+.growth-review h4{
+  color:#0f172a;
+}
+
+.growth-review p,
+.growth-review li,
+.growth-review .muted,
+.growth-review .subhead,
+.growth-review .tiny{
+  color:#475569;
+}
+
+.growth-review label span,
+.growth-review label,
+.growth-review .form label{
+  color:#334155;
+}
+
+.growth-review input,
+.growth-review textarea,
+.growth-review select{
+  background:#ffffff;
+  color:#0f172a;
+  border:1px solid rgba(15,23,42,.18);
+}
+
+.growth-review input::placeholder,
+.growth-review textarea::placeholder{
+  color:#94a3b8;
+}
+
+.growth-review input:focus,
+.growth-review textarea:focus,
+.growth-review select:focus{
+  border-color:#06b6d4;
+  box-shadow:0 0 0 4px rgba(6,182,212,.16);
+}
+
+.growth-review .btn-primary{
+  color:#ffffff;
+}
