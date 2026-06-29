@@ -104,6 +104,7 @@
   <a href="${BASE}/case-studies">Case Studies</a>
   <a href="${BASE}/contact">Contact</a>
   <a href="${BASE}/privacy">Privacy Policy</a>
+  <a href="${BASE}/industries">Industries</a>
 </div>
         </div>
       </footer>
