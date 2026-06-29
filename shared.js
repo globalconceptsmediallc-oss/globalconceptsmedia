@@ -7,12 +7,13 @@
 
   const BASE = IS_GITHUB_PAGES ? "/globalconceptsmedia" : "";
 
-  const navItems = [
-    { href: `${BASE}/google-ads`, label: "Google Ads" },
-    { href: `${BASE}/seo`, label: "SEO" },
-    { href: `${BASE}/case-studies`, label: "Case Studies" },
-    { href: `${BASE}/contact`, label: "Contact" }
-  ];
+const navItems = [
+  { href: `${BASE}/industries`, label: "Industries" },
+  { href: `${BASE}/google-ads`, label: "Google Ads" },
+  { href: `${BASE}/seo`, label: "SEO" },
+  { href: `${BASE}/case-studies`, label: "Case Studies" },
+  { href: `${BASE}/contact`, label: "Contact" }
+];
 
   function withV(url) {
     if (!url || url.startsWith("http")) return url;
