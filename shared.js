@@ -98,15 +98,13 @@
             <div class="copy">© ${year} Global Concepts Media. All rights reserved.</div>
           </div>
 
-          <div class="footer-links" aria-label="Footer navigation">
-            <a href="${BASE}/google-ads">Google Ads</a>
-            <a href="${BASE}/seo">SEO</a>
-            <a href="${BASE}/case-studies">Case Studies</a>
-            <a href="${BASE}/contact">Contact</a>
-            <a href="${BASE}/privacy">Privacy Policy</a>
-            <a href="${BASE}/terms">Terms of Service</a>
-            <a href="${BASE}/accessibility">Accessibility</a>
-          </div>
+         <div class="footer-links" aria-label="Footer navigation">
+  <a href="${BASE}/google-ads">Google Ads</a>
+  <a href="${BASE}/seo">SEO</a>
+  <a href="${BASE}/case-studies">Case Studies</a>
+  <a href="${BASE}/contact">Contact</a>
+  <a href="${BASE}/privacy">Privacy Policy</a>
+</div>
         </div>
       </footer>
     `;
