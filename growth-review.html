@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Book a Growth Review with Global Concepts Media and find the website, SEO, ads, tracking, and lead flow gaps costing your business growth." />
+
+  <meta
+    name="description"
+    content="Request a consultant-reviewed 90-Day Growth Review from Global Concepts Media. Get a prioritized growth roadmap based on observable evidence for $299."
+  />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0SN72D1GNG"></script>
   <script>
@@ -13,11 +17,12 @@
     gtag('config', 'G-0SN72D1GNG', { anonymize_ip: true });
   </script>
 
-  <title>Growth Review | Global Concepts Media</title>
+  <title>90-Day Growth Review — $299 | Global Concepts Media</title>
 
+  <link rel="canonical" href="https://globalconceptsmedia.com/growth-review.html" />
   <link rel="icon" href="./images/logo.jpg" />
-  <link rel="stylesheet" href="./styles.css?v=20260629" />
-  <script defer src="./shared.js?v=20260629"></script>
+  <link rel="stylesheet" href="./styles.css?v=20260710-1" />
+  <script defer src="./shared.js?v=20260710-1"></script>
 
   <style>
     body{
@@ -37,7 +42,7 @@
       display:grid;
       grid-template-columns:1.05fr .95fr;
       gap:48px;
-      align-items:center;
+      align-items:start;
     }
 
     .growth-copy h1{
@@ -55,26 +60,72 @@
       max-width:700px;
     }
 
+    .price-line{
+      display:flex;
+      align-items:baseline;
+      gap:12px;
+      margin:24px 0 8px;
+    }
+
+    .price{
+      color:#0f172a;
+      font-size:clamp(2.4rem,4vw,4rem);
+      font-weight:950;
+      letter-spacing:-.055em;
+      line-height:1;
+    }
+
+    .price-note{
+      color:#64748b;
+      font-weight:800;
+    }
+
     .growth-list{
-      margin:24px 0 0;
+      margin:26px 0 0;
       padding:0;
       list-style:none;
       display:grid;
-      gap:12px;
+      gap:13px;
       color:#475569;
       font-weight:750;
     }
 
+    .growth-list li{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+    }
+
     .growth-list li:before{
       content:"";
-      display:inline-block;
-      width:8px;
-      height:8px;
-      margin-right:10px;
+      flex:0 0 auto;
+      width:9px;
+      height:9px;
+      margin-top:8px;
       border-radius:50%;
       background:#06b6d4;
       box-shadow:0 0 16px rgba(6,182,212,.55);
-      vertical-align:middle;
+    }
+
+    .growth-proof{
+      margin-top:28px;
+      padding:20px;
+      border:1px solid rgba(15,23,42,.10);
+      border-radius:20px;
+      background:rgba(255,255,255,.72);
+      box-shadow:0 16px 40px rgba(15,23,42,.08);
+    }
+
+    .growth-proof strong{
+      display:block;
+      color:#0f172a;
+      margin-bottom:6px;
+    }
+
+    .growth-proof p{
+      margin:0;
+      font-size:1rem;
+      color:#475569;
     }
 
     .growth-card{
@@ -110,14 +161,21 @@
       font-weight:900;
     }
 
-    .growth-form span{
+    .growth-form label > span{
       display:block;
       margin-bottom:7px;
       color:#334155;
     }
 
+    .optional{
+      display:inline;
+      color:#64748b;
+      font-weight:700;
+    }
+
     .growth-form input,
-    .growth-form textarea{
+    .growth-form textarea,
+    .growth-form select{
       width:100%;
       background:#ffffff;
       color:#0f172a;
@@ -134,19 +192,20 @@
     }
 
     .growth-form input:focus,
-    .growth-form textarea:focus{
+    .growth-form textarea:focus,
+    .growth-form select:focus{
       border-color:#06b6d4;
       box-shadow:0 0 0 4px rgba(6,182,212,.18);
     }
 
     .growth-form textarea{
-      min-height:150px;
+      min-height:132px;
       resize:vertical;
     }
 
     .growth-form button{
       width:100%;
-      min-height:48px;
+      min-height:52px;
       border:0;
       border-radius:16px;
       background:linear-gradient(135deg,#7c3aed,#06b6d4);
@@ -154,11 +213,19 @@
       font-weight:950;
       cursor:pointer;
       box-shadow:0 18px 42px rgba(6,182,212,.22);
+      transition:transform .16s ease, box-shadow .16s ease;
     }
 
     .growth-form button:hover{
       transform:translateY(-2px);
       box-shadow:0 24px 58px rgba(6,182,212,.28);
+    }
+
+    .form-note{
+      margin:0;
+      color:#64748b;
+      font-size:.92rem;
+      line-height:1.5;
     }
 
     @media(max-width:900px){
@@ -185,29 +252,64 @@
   <main class="growth-wrap">
     <div class="container growth-grid">
       <section class="growth-copy">
-        <div class="eyebrow">Book the Review</div>
+        <div class="eyebrow">90-Day Growth Review™</div>
 
-        <h1>Let’s find your biggest growth opportunity.</h1>
+        <h1>Turn your Snapshot into a clear growth plan.</h1>
 
         <p>
-          Send your business name, website, and what you are trying to improve.
-          We will review the details and reply with next steps.
+          Your free Business Snapshot identifies the first visible opportunity.
+          The full 90-Day Growth Review explains what is holding growth back,
+          what should be fixed first, why it matters, and how success should be measured.
         </p>
 
+        <div class="price-line">
+          <span class="price">$299</span>
+          <span class="price-note">one-time review</span>
+        </div>
+
         <ul class="growth-list">
-          <li>Your website and current offer</li>
-          <li>What you are trying to improve</li>
-          <li>Whether you are running ads</li>
-          <li>What success looks like in 90 days</li>
+          <li>Executive summary of your strongest and weakest growth areas</li>
+          <li>Review of the five questions customers ask before they buy</li>
+          <li>Prioritized recommendations ranked by impact, urgency, and effort</li>
+          <li>90-day action plan for Days 1–30, 31–60, and 61–90</li>
+          <li>Measurement plan tied to leads, calls, conversions, visibility, or revenue</li>
+          <li>Implementation options for your team, GCM support, or managed execution</li>
         </ul>
+
+        <div class="growth-proof">
+          <strong>Evidence before assumptions.</strong>
+          <p>
+            Every recommendation must connect to an observable business issue,
+            expected business impact, and a measurable result.
+          </p>
+        </div>
       </section>
 
-      <section class="growth-card" aria-label="Growth Review form">
-        <h2>Request your Growth Review</h2>
-        <p>This form sends your request directly to our inbox.</p>
+      <section class="growth-card" aria-label="90-Day Growth Review request form">
+        <h2>Request Your 90-Day Growth Review</h2>
 
-        <form class="growth-form" name="growth-review" method="POST" data-netlify="true">
+        <p>
+          Submit your details below. We will review the request and contact you
+          with the next step for the $299 Growth Review.
+        </p>
+
+        <form
+          class="growth-form"
+          name="growth-review"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
           <input type="hidden" name="form-name" value="growth-review" />
+          <input type="hidden" name="product" value="90-Day Growth Review" />
+          <input type="hidden" name="price" value="$299" />
+
+          <p hidden>
+            <label>
+              Do not fill this out:
+              <input name="bot-field" />
+            </label>
+          </p>
 
           <label>
             <span>Name</span>
@@ -220,19 +322,65 @@
           </label>
 
           <label>
-            <span>Website</span>
-            <input type="url" name="website" placeholder="https://example.com" />
+            <span>Business Name</span>
+            <input
+              type="text"
+              name="business-name"
+              autocomplete="organization"
+              required
+            />
           </label>
 
           <label>
-            <span>What are you trying to improve?</span>
-            <textarea name="message" placeholder="Tell us about your website, ads, SEO, leads, or tracking issues." required></textarea>
+            <span>Website</span>
+            <input
+              type="url"
+              name="website"
+              id="website"
+              autocomplete="url"
+              placeholder="https://example.com"
+              required
+            />
           </label>
 
-          <button type="submit">Schedule My Growth Review</button>
+          <label>
+            <span>What is the main result you want in the next 90 days?</span>
+            <textarea
+              name="growth-goal"
+              placeholder="More qualified leads, stronger local visibility, better conversion, clearer tracking, or another measurable business result."
+              required
+            ></textarea>
+          </label>
+
+          <label>
+            <span>Anything else we should know? <span class="optional">Optional</span></span>
+            <textarea
+              name="additional-context"
+              placeholder="Share any current concerns, campaigns, recent changes, or constraints."
+            ></textarea>
+          </label>
+
+          <button type="submit">
+            Request My 90-Day Growth Review — $299
+          </button>
+
+          <p class="form-note">
+            Submitting this form requests the review. We will confirm the details
+            and payment step before work begins.
+          </p>
         </form>
       </section>
     </div>
   </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const websiteField = document.getElementById("website");
+    const websiteFromQuery = params.get("website");
+
+    if (websiteFromQuery && websiteField) {
+      websiteField.value = websiteFromQuery;
+    }
+  </script>
 </body>
 </html>
